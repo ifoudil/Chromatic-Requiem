@@ -1,0 +1,32 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1746203927
+icon.svg::CompressedTexture2D::4388525710219405589::1746203298::1746203518::1::::<><>::
+README.md::TextFile::-1::1746202971::0::1::::<><>::
+::res://Assets/::1746203872
+Atk_box copie.png::CompressedTexture2D::6091448280763944789::1746203297::1746203871::1::::<><>::
+Atk_box.png::CompressedTexture2D::7423605942391547935::1746203297::1746203871::1::::<><>::
+Capture d’écran 2025-04-21 à 02.22.06.png::CompressedTexture2D::1286696600626629956::1746203297::1746203871::1::::<><>::
+ChatGPT Image 21 avr. 2025 à 01_32_00.png::CompressedTexture2D::6901004250231713479::1746203297::1746203872::1::::<><>::
+ChatGPT Image 21 avr. 2025 à 01_33_41.png::CompressedTexture2D::1014489453847035379::1746203297::1746203872::1::::<><>::
+fond_scene1.png::CompressedTexture2D::2867049296499019846::1746203297::1746203872::1::::<><>::
+perso_chroma_requiem (2).png::CompressedTexture2D::3550546451084094980::1746203297::1746203871::1::::<><>::
+perso_chroma_requiem (3).png::CompressedTexture2D::5748255642574805510::1746203297::1746203871::1::::<><>::
+perso_chroma_requiem (4).png::CompressedTexture2D::4777768453221174070::1746203297::1746203871::1::::<><>::
+perso_chroma_requiem (8).png::CompressedTexture2D::4566629018462873129::1746203297::1746203871::1::::<><>::
+perso_chroma_requiem (9).png::CompressedTexture2D::3245140269297531810::1746203297::1746203871::1::::<><>::
+perso_chroma_requiem (55) copie 2.png::CompressedTexture2D::2900783035411019548::1746203297::1746203871::1::::<><>::
+perso_chroma_requiem (55) copie 3.png::CompressedTexture2D::9120054871467283877::1746203297::1746203871::1::::<><>::
+perso_chroma_requiem (55) copie 4.png::CompressedTexture2D::1906794017268164792::1746203297::1746203871::1::::<><>::
+perso_chroma_requiem (55) copie 5.png::CompressedTexture2D::6232245071305603397::1746203297::1746203871::1::::<><>::
+perso_final copie 2.png::CompressedTexture2D::2024416665835773331::1746203297::1746203871::1::::<><>::
+perso_final copie 3.png::CompressedTexture2D::4867898115732884139::1746203297::1746203871::1::::<><>::
+perso_final copie 4.png::CompressedTexture2D::2382223767707332434::1746203297::1746203871::1::::<><>::
+perso_final copie.png::CompressedTexture2D::4450492469486188591::1746203297::1746203871::1::::<><>::
+perso_final.png::CompressedTexture2D::6380313713861260395::1746203297::1746203871::1::::<><>::
+scene2.png::CompressedTexture2D::6467256424420296649::1746203298::1746203872::1::::<><>::
+::res://Scenes/::1746204022
+player.tscn::PackedScene::8777611746390617727::1746203922::0::1::::<><>::uid://opoq1aix4l8n::::res://Assets/ChatGPT Image 21 avr. 2025 à 01_33_41.png<>res://Scripts/player.gd<>uid://dd1bx8j5cmldn::::res://Assets/Atk_box.png<>uid://b4n37wvhjhguh::::res://Assets/perso_final copie.png<>uid://cbmbtn2bsfnvf::::res://Assets/perso_final copie 3.png<>uid://cs10i7jkjjwbd::::res://Assets/Atk_box copie.png<>uid://2fwvbonmu2vc::::res://Assets/perso_chroma_requiem (55) copie 4.png<>uid://33v312kgomtn::::res://Assets/perso_final copie 2.png<>uid://cw5w3m5yxvgyl::::res://Assets/perso_final.png<>uid://cu17fvv5puhmb::::res://Assets/perso_chroma_requiem (55) copie 5.png<>uid://d2628a2bt4kw0::::res://Assets/perso_chroma_requiem (55) copie 3.png<>uid://bhlfqcsjvokem::::res://Assets/perso_chroma_requiem (55) copie 2.png
+static_body_2d.gd::GDScript::-1::1746203298::0::1::::<>StaticBody2D<>::
+::res://Scripts/::1746203927
+player.gd::GDScript::-1::1746203298::0::1::::<>CharacterBody2D<>::
+sol.gd::GDScript::-1::1746203298::0::1::::<>StaticBody2D<>::
