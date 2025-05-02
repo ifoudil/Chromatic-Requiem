@@ -1,0 +1,25 @@
+# Fichiers utilisateur spécifiques (ne pas partager)
+.export/
+.import/
+*.import
+*.godot/tmp/
+*.cfg
+*.tres
+*.res
+*.translation
+*.converted.scn
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Cache et fichiers temporaires
+*.tmp
+*.log
+*.bak
+
+# Godot-specific editor data
+.editor_config
+godot/editor_data/
+godot/editor_settings-*.tpl
