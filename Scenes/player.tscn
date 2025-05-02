@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://opoq1aix4l8n" path="res://Assets/ChatGPT Image 21 avr. 2025 à 01_33_41.png" id="1_tx1dd"]
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_vgqql"]
+[ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="3_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://b4n37wvhjhguh" path="res://Assets/perso_final copie.png" id="3_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://cbmbtn2bsfnvf" path="res://Assets/perso_final copie 3.png" id="4_tx1dd"]
