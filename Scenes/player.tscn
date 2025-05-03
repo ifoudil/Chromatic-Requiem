@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=19 format=3 uid="uid://dxb68onk8b6df"]
 
-[ext_resource type="Texture2D" uid="uid://opoq1aix4l8n" path="res://Assets/ChatGPT Image 21 avr. 2025 à 01_33_41.png" id="1_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://db6686aeeqaf3" path="res://Assets/New Piskel (11).png" id="1_pu2lt"]
 [ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="3_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://b4n37wvhjhguh" path="res://Assets/perso_final copie.png" id="3_tx1dd"]
@@ -17,7 +17,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tx1dd")
+"texture": ExtResource("1_pu2lt")
 }],
 "loop": true,
 "name": &"default",
@@ -25,7 +25,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
-size = Vector2(671, 67)
+size = Vector2(644, 105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pu2lt"]
+size = Vector2(50, 393)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukyrk"]
+size = Vector2(80, 384)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vgqql"]
 animations = [{
@@ -101,23 +107,31 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
-size = Vector2(52, 111.016)
+size = Vector2(57, 95)
 
 [node name="PlayerScene1" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-170, -140)
+position = Vector2(-285, -149)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
-position = Vector2(489.5, 242)
-scale = Vector2(0.629883, 0.535156)
+position = Vector2(606.469, 329.836)
+scale = Vector2(0.99541, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(499.5, 502.5)
+position = Vector2(606, 483.5)
 shape = SubResource("RectangleShape2D_8erm5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(314, 343.5)
+shape = SubResource("RectangleShape2D_pu2lt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(886, 335)
+shape = SubResource("RectangleShape2D_ukyrk")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(54, -15)
@@ -126,15 +140,15 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-position = Vector2(1109, -169)
-scale = Vector2(2.45023, 2.34821)
+position = Vector2(1109, -215.813)
+scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_vgqql")
 animation = &"atk1_right"
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(156, 283.508)
+position = Vector2(140.5, 249.5)
 shape = SubResource("RectangleShape2D_fkybt")
 metadata/_edit_group_ = true
 
