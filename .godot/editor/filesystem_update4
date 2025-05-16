@@ -8,3 +8,4 @@ res://Scripts/player.gd
 res://scripts/area_2d_2.gd
 res://Scenes/menu_2.tscn
 res://scripts/menu_2.gd
+res://Scenes/Baddie.tscn
