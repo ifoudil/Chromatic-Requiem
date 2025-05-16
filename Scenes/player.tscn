@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=23 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://db6686aeeqaf3" path="res://Assets/New Piskel (11).png" id="1_pu2lt"]
 [ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_vgqql"]
+[ext_resource type="Script" uid="uid://dvm8286ydnq1h" path="res://scripts/area_2d.gd" id="2_ukyrk"]
+[ext_resource type="Script" uid="uid://cbbr5680mc0h6" path="res://scripts/area_2d_2.gd" id="3_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="3_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://b4n37wvhjhguh" path="res://Assets/perso_final copie.png" id="3_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://cbmbtn2bsfnvf" path="res://Assets/perso_final copie 3.png" id="4_tx1dd"]
@@ -30,8 +32,14 @@ size = Vector2(644, 105)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pu2lt"]
 size = Vector2(50, 393)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dp3o"]
+size = Vector2(77, 382)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ukyrk"]
 size = Vector2(80, 384)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4iuc"]
+size = Vector2(61, 372)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vgqql"]
 animations = [{
@@ -113,7 +121,6 @@ size = Vector2(57, 95)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-285, -149)
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
 position = Vector2(606.469, 329.836)
@@ -130,8 +137,23 @@ position = Vector2(314, 343.5)
 shape = SubResource("RectangleShape2D_pu2lt")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(886.5, 341)
+shape = SubResource("RectangleShape2D_7dp3o")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+script = ExtResource("2_ukyrk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
 position = Vector2(886, 335)
 shape = SubResource("RectangleShape2D_ukyrk")
+
+[node name="Area2D2" type="Area2D" parent="StaticBody2D"]
+position = Vector2(-6, -1)
+script = ExtResource("3_7dp3o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D2"]
+position = Vector2(323.5, 333)
+shape = SubResource("RectangleShape2D_h4iuc")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(54, -15)
