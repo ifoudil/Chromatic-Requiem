@@ -1,13 +1,6 @@
-res://Scenes/menu_ui.tscn
-res://Scenes/menu.tscn
-res://scripts/menu.gd
 res://Scenes/player.tscn
-res://scripts/collision_shape_2d_2.gd
-res://scripts/area_2d.gd
-res://Scripts/player.gd
-res://scripts/area_2d_2.gd
+res://Scenes/menu.tscn
 res://Scenes/menu_2.tscn
-res://scripts/menu_2.gd
 res://Scenes/Baddie.tscn
-res://Scenes/splashScreen.tscn
-res://scripts/launch.gd
+res://Scenes/Credits.tscn
+res://Scripts/animation_player.gd

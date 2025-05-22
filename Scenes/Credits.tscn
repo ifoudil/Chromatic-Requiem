@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=3 uid="uid://conjm8qi1agyb"]
+
+[ext_resource type="Texture2D" uid="uid://ch5a857yv07c2" path="res://Assets/credits.png" id="1_i8h6y"]
+[ext_resource type="Script" uid="uid://qh43pbria0h4" path="res://Scripts/animation_player.gd" id="2_xbebw"]
+[ext_resource type="Texture2D" uid="uid://csc4p61uc2f3l" path="res://Assets/SplashScreen.png" id="3_7xmno"]
+
+[sub_resource type="Animation" id="Animation_7xmno"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../splashScreen:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xbebw"]
+resource_name = "open"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.4, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../splashScreen:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.99, 3, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(1, 0, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uy3b0"]
+resource_name = "play"
+length = 2.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../splashScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3, 1.32, 1.53333, 1.54, 1.56, 1.8, 1.83333, 2.2, 2.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(1, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uy3b0"]
+_data = {
+&"RESET": SubResource("Animation_7xmno"),
+&"open": SubResource("Animation_xbebw"),
+&"play": SubResource("Animation_uy3b0")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="credit" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_i8h6y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../credit")
+libraries = {
+&"": SubResource("AnimationLibrary_uy3b0")
+}
+script = ExtResource("2_xbebw")
+
+[node name="splashScreen" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 641.0
+offset_bottom = 363.0
+texture = ExtResource("3_7xmno")
+
+[node name="play" type="Button" parent="splashScreen"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = 223.0
+offset_top = 230.0
+offset_right = 424.0
+offset_bottom = 280.0
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
+[connection signal="pressed" from="splashScreen/play" to="AnimationPlayer" method="_on_play_pressed"]

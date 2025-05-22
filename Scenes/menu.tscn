@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnpugvblpnqgf"]
 
-[ext_resource type="Script" uid="uid://d18hovlm31dt8" path="res://scripts/menu.gd" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://d18hovlm31dt8" path="res://Scripts/menu.gd" id="1_1rerr"]
 [ext_resource type="Texture2D" uid="uid://cxk3tghq1fwdc" path="res://Assets/menu1.png" id="2_xhh6f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cayip"]
