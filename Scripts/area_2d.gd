@@ -1,6 +1,6 @@
 extends Area2D
 
-var menu_scene = preload("res://Scenes/menu.tscn")
+var menu_scene = preload("res://Scenes/menu_2.tscn")
 var menu_instance = null
 
 func _ready():

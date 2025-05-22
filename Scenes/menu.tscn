@@ -19,7 +19,7 @@ script = ExtResource("1_1rerr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(327, 171)
+position = Vector2(315, 183)
 scale = Vector2(5.05208, 4.40625)
 sprite_frames = SubResource("SpriteFrames_cayip")
 

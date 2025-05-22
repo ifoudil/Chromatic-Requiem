@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://gqsr4ql0do3l"]
+
+[ext_resource type="Texture2D" uid="uid://csc4p61uc2f3l" path="res://Assets/SplashScreen.png" id="1_jarje"]
+[ext_resource type="Script" uid="uid://dil68sjmyvcwk" path="res://scripts/launch.gd" id="2_3jnk7"]
+
+[sub_resource type="Animation" id="Animation_jarje"]
+resource_name = "open"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1.31951, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 0, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3jnk7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ayf0v"]
+resource_name = "play"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.57806, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ayf0v"]
+_data = {
+&"RESET": SubResource("Animation_3jnk7"),
+&"open": SubResource("Animation_jarje"),
+&"play": SubResource("Animation_ayf0v")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="logo" type="TextureRect" parent="."]
+offset_top = -15.0
+offset_right = 640.0
+offset_bottom = 375.0
+texture = ExtResource("1_jarje")
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ayf0v")
+}
+script = ExtResource("2_3jnk7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 223.0
+offset_top = 229.0
+offset_right = 421.0
+offset_bottom = 284.0
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
+[connection signal="pressed" from="VBoxContainer/Play" to="AnimationPlayer" method="_on_play_pressed"]

@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Test_jeu1"
-run/main_scene="res://Scenes/player.tscn"
+run/main_scene="uid://gqsr4ql0do3l"
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/bg_color=Color(0.579666, 0.623379, 0.893684, 1)
+boot_splash/bg_color=Color(0.909543, 0.374703, 1, 1)
 config/icon="res://icon.svg"
 
 [display]

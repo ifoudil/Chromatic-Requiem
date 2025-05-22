@@ -9,3 +9,5 @@ res://scripts/area_2d_2.gd
 res://Scenes/menu_2.tscn
 res://scripts/menu_2.gd
 res://Scenes/Baddie.tscn
+res://Scenes/splashScreen.tscn
+res://scripts/launch.gd
