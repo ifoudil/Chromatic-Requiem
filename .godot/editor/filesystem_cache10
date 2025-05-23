@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747958070
+::res://::1747964710
 icon.svg::CompressedTexture2D/CompressedTexture2D::4388525710219405589::1745073225::1746204748::1::::<><><>0<>0<>ca6041fecbed98864f278100f5c12cfc<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1746202912::0::1::::<><><>0<>0<><>::
-area_2d_2.gd::GDScript::8008795463370639633::1747958070::0::1::::<>Area2D<><>0<>0<><>::
-::res://Assets/::1747952025
+area_2d_2.gd::GDScript::8008795463370639633::1747964710::0::1::::<>Area2D<><>0<>0<><>::
+::res://Assets/::1747966256
 Atk_box copie.png::CompressedTexture2D/CompressedTexture2D::6091448280763944789::1746204685::1746204748::1::::<><><>0<>0<>9f7693921e036df47de7a398a75e03e2<>res://.godot/imported/Atk_box copie.png-6e9ce4de9d08874919f96a77a616f5f9.ctex::
 Atk_box.png::CompressedTexture2D/CompressedTexture2D::7423605942391547935::1746204685::1746204748::1::::<><><>0<>0<>c0bb41b4fbf89fc4bc169d8f0eb25e9a<>res://.godot/imported/Atk_box.png-b6367bd1a6aaa6baeb0c5e655b9fce04.ctex::
 Capture d’écran 2025-04-21 à 02.22.06.png::CompressedTexture2D/CompressedTexture2D::1286696600626629956::1746204685::1746204748::1::::<><><>0<>0<>2ca8a72b8bb95d104007d994b2980022<>res://.godot/imported/Capture d’écran 2025-04-21 à 02.22.06.png-05475fc664d4a915388d889b89c63d77.ctex::
@@ -14,6 +14,7 @@ fond_scene1.png::CompressedTexture2D/CompressedTexture2D::2867049296499019846::1
 menu1.png::CompressedTexture2D/CompressedTexture2D::6409562881198864072::1747411642::1747411716::1::::<><><>0<>0<>2a71d622ef67ed954e9ca01525cd8484<>res://.godot/imported/menu1.png-ce3952afd926a8fb47d6f1198127ffa0.ctex::
 microships.png::CompressedTexture2D::2232671317586472170::1747952020::1747952025::1::::<><><>0<>0<>a3c68c84132e943d4fc361b64b50b6bf<>res://.godot/imported/microships.png-55d7091c8a79e4287bc0948348c0df62.ctex::
 New Piskel (11).png::CompressedTexture2D/CompressedTexture2D::7295389391479381126::1746204884::1746204884::1::::<><><>0<>0<>b962f0ba481238ad8e6a0cafda6b3b33<>res://.godot/imported/New Piskel (11).png-cdafc6f04323c46ffde11bccd4591982.ctex::
+pause.png::CompressedTexture2D::4021989894386523548::1747965965::1747966258::1::::<><><>0<>0<>7deb6f4892e40a198c72891fe8ead8a1<>res://.godot/imported/pause.png-6cc586a6ad215b2f21a53cfa9aaa6b1d.ctex::
 perso_chroma_requiem (2).png::CompressedTexture2D/CompressedTexture2D::3550546451084094980::1746204685::1746204748::1::::<><><>0<>0<>5fd589a871130e3d3aec0938555d9e01<>res://.godot/imported/perso_chroma_requiem (2).png-c083e2b5328779393716135107af87bb.ctex::
 perso_chroma_requiem (3).png::CompressedTexture2D/CompressedTexture2D::5748255642574805510::1746204685::1746204748::1::::<><><>0<>0<>f8e0c7d7cf7eb9b66e846eaefec37bcf<>res://.godot/imported/perso_chroma_requiem (3).png-6e30889da56dc10207386e8e95f29cfc.ctex::
 perso_chroma_requiem (4).png::CompressedTexture2D/CompressedTexture2D::4777768453221174070::1746204685::1746204748::1::::<><><>0<>0<>c9fc66cb1716301305e18bac1ecfad65<>res://.godot/imported/perso_chroma_requiem (4).png-c9c641361c0851b1ed46ff01b17e7c5a.ctex::
@@ -31,23 +32,23 @@ perso_final.png::CompressedTexture2D/CompressedTexture2D::6380313713861260395::1
 scene2.png::CompressedTexture2D/CompressedTexture2D::6467256424420296649::1746204685::1746204749::1::::<><><>0<>0<>7b37bc5549adb2f3946ca1c55ebfa544<>res://.godot/imported/scene2.png-884f11cf20d3400c87841566070c3cbe.ctex::
 SplashScreen copie.png::CompressedTexture2D/CompressedTexture2D::6627443851110540043::1747848633::1747848697::1::::<><><>0<>0<>62d3d9cec0f6cf786a5e1f6138d3c332<>res://.godot/imported/SplashScreen copie.png-73d1ab977cb98c0dcf827733bef0dd02.ctex::
 SplashScreen.png::CompressedTexture2D/CompressedTexture2D::6042158557378923855::1747848696::1747848696::1::::<><><>0<>0<>72f39e245b5f711056355f51748c00a0<>res://.godot/imported/SplashScreen.png-5976b92e4ad14a07341ab000568fc9e1.ctex::
-::res://Scenes/::1747958865
-Baddie.tscn::PackedScene::6843768603690116011::1747958865::0::1::::<><><>0<>0<><>::uid://dhggmxord85gq::::res://Scripts/player.gd<>uid://dd1bx8j5cmldn::::res://Assets/Atk_box.png<>uid://cs10i7jkjjwbd::::res://Assets/Atk_box copie.png<>uid://b4n37wvhjhguh::::res://Assets/perso_final copie.png<>uid://cbmbtn2bsfnvf::::res://Assets/perso_final copie 3.png<>uid://33v312kgomtn::::res://Assets/perso_final copie 2.png<>uid://cw5w3m5yxvgyl::::res://Assets/perso_final.png<>uid://2fwvbonmu2vc::::res://Assets/perso_chroma_requiem (55) copie 4.png<>uid://cu17fvv5puhmb::::res://Assets/perso_chroma_requiem (55) copie 5.png<>uid://d2628a2bt4kw0::::res://Assets/perso_chroma_requiem (55) copie 3.png<>uid://bhlfqcsjvokem::::res://Assets/perso_chroma_requiem (55) copie 2.png
-Credits.tscn::PackedScene::5782891729968850793::1747958865::0::1::::<><><>0<>0<><>::uid://ch5a857yv07c2::::res://Assets/credits.png<>uid://qh43pbria0h4::::res://Scripts/animation_player.gd<>uid://csc4p61uc2f3l::::res://Assets/SplashScreen.png<>uid://djm1tpv46e24u::::res://SFX/néon.wav<>uid://cjqk25eynrsqg::::res://SFX/clignotement.wav<>uid://cqgpf3367prki::::res://SFX/interupteur.wav
-menu.tscn::PackedScene::3331067476972699145::1747958865::0::1::::<><><>0<>0<><>::uid://d18hovlm31dt8::::res://Scripts/menu.gd<>uid://62r1gt6wam3c::::res://Assets/microships.png
-menu_2.tscn::PackedScene::4466592612629505365::1747958865::0::1::::<><><>0<>0<><>::uid://d22c4qrkj8mus::::res://Scripts/menu_2.gd
-player.tscn::PackedScene::8777611746390617727::1747958865::0::1::::<><><>0<>0<><>::uid://db6686aeeqaf3::::res://Assets/New Piskel (11).png<>uid://dhggmxord85gq::::res://Scripts/player.gd<>uid://dvm8286ydnq1h::::res://Scripts/area_2d.gd<>uid://cbbr5680mc0h6::::res://Scripts/area_2d_2.gd<>uid://dd1bx8j5cmldn::::res://Assets/Atk_box.png<>uid://b4n37wvhjhguh::::res://Assets/perso_final copie.png<>uid://cbmbtn2bsfnvf::::res://Assets/perso_final copie 3.png<>uid://cs10i7jkjjwbd::::res://Assets/Atk_box copie.png<>uid://2fwvbonmu2vc::::res://Assets/perso_chroma_requiem (55) copie 4.png<>uid://33v312kgomtn::::res://Assets/perso_final copie 2.png<>uid://cw5w3m5yxvgyl::::res://Assets/perso_final.png<>uid://cu17fvv5puhmb::::res://Assets/perso_chroma_requiem (55) copie 5.png<>uid://d2628a2bt4kw0::::res://Assets/perso_chroma_requiem (55) copie 3.png<>uid://bhlfqcsjvokem::::res://Assets/perso_chroma_requiem (55) copie 2.png
-::res://Scripts/::1747958070
-animation_player.gd::GDScript::1139283727684679759::1747958070::0::1::::<>AnimationPlayer<><>0<>0<><>::
-area_2d.gd::GDScript::8660053959977907219::1747958070::0::1::::<>Area2D<><>0<>0<><>::
-area_2d_2.gd::GDScript::4846182031826900641::1747958070::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scenes/::1747966126
+Baddie.tscn::PackedScene::6843768603690116011::1747964912::0::1::::<><><>0<>0<><>::uid://dhggmxord85gq::::res://Scripts/player.gd<>uid://dd1bx8j5cmldn::::res://Assets/Atk_box.png<>uid://cs10i7jkjjwbd::::res://Assets/Atk_box copie.png<>uid://b4n37wvhjhguh::::res://Assets/perso_final copie.png<>uid://cbmbtn2bsfnvf::::res://Assets/perso_final copie 3.png<>uid://33v312kgomtn::::res://Assets/perso_final copie 2.png<>uid://cw5w3m5yxvgyl::::res://Assets/perso_final.png<>uid://2fwvbonmu2vc::::res://Assets/perso_chroma_requiem (55) copie 4.png<>uid://cu17fvv5puhmb::::res://Assets/perso_chroma_requiem (55) copie 5.png<>uid://d2628a2bt4kw0::::res://Assets/perso_chroma_requiem (55) copie 3.png<>uid://bhlfqcsjvokem::::res://Assets/perso_chroma_requiem (55) copie 2.png
+Credits.tscn::PackedScene::5782891729968850793::1747964912::0::1::::<><><>0<>0<><>::uid://ch5a857yv07c2::::res://Assets/credits.png<>uid://qh43pbria0h4::::res://Scripts/animation_player.gd<>uid://csc4p61uc2f3l::::res://Assets/SplashScreen.png<>uid://bemy7hxh3r7gh::::res://SFX/ELECBuzz_Neon-ou-transfo-1-_ID-2118__LS.mp3<>uid://cjqk25eynrsqg::::res://SFX/clignotement.wav<>uid://cqgpf3367prki::::res://SFX/interupteur.wav
+menu.tscn::PackedScene::3331067476972699145::1747966126::0::1::::<><><>0<>0<><>::uid://d18hovlm31dt8::::res://Scripts/menu.gd<>uid://62r1gt6wam3c::::res://Assets/microships.png<>uid://d2628a2bt4kw0::::res://Assets/perso_chroma_requiem (55) copie 3.png
+menu_2.tscn::PackedScene::4466592612629505365::1747964912::0::1::::<><><>0<>0<><>::uid://d22c4qrkj8mus::::res://Scripts/menu_2.gd
+player.tscn::PackedScene::8777611746390617727::1747964912::0::1::::<><><>0<>0<><>::uid://db6686aeeqaf3::::res://Assets/New Piskel (11).png<>uid://dhggmxord85gq::::res://Scripts/player.gd<>uid://dvm8286ydnq1h::::res://Scripts/area_2d.gd<>uid://cbbr5680mc0h6::::res://Scripts/area_2d_2.gd<>uid://dd1bx8j5cmldn::::res://Assets/Atk_box.png<>uid://b4n37wvhjhguh::::res://Assets/perso_final copie.png<>uid://cbmbtn2bsfnvf::::res://Assets/perso_final copie 3.png<>uid://cs10i7jkjjwbd::::res://Assets/Atk_box copie.png<>uid://2fwvbonmu2vc::::res://Assets/perso_chroma_requiem (55) copie 4.png<>uid://33v312kgomtn::::res://Assets/perso_final copie 2.png<>uid://cw5w3m5yxvgyl::::res://Assets/perso_final.png<>uid://cu17fvv5puhmb::::res://Assets/perso_chroma_requiem (55) copie 5.png<>uid://d2628a2bt4kw0::::res://Assets/perso_chroma_requiem (55) copie 3.png<>uid://bhlfqcsjvokem::::res://Assets/perso_chroma_requiem (55) copie 2.png
+::res://Scripts/::1747964902
+animation_player.gd::GDScript::1139283727684679759::1747964710::0::1::::<>AnimationPlayer<><>0<>0<><>::
+area_2d.gd::GDScript::8660053959977907219::1747964710::0::1::::<>Area2D<><>0<>0<><>::
+area_2d_2.gd::GDScript::4846182031826900641::1747964710::0::1::::<>Area2D<><>0<>0<><>::
 collision_shape_2d_2.gd::GDScript/GDScript::1141200213508286621::1747406040::0::1::::<>CollisionShape2D<><>0<>0<><>::
-menu.gd::GDScript::9052747592183021699::1747958070::0::1::::<>CanvasLayer<><>0<>0<><>::
-menu_2.gd::GDScript::9110273117777536642::1747958070::0::1::::<>CanvasLayer<><>0<>0<><>::
-player.gd::GDScript::7663357184995404332::1747958070::0::1::::<>CharacterBody2D<><>0<>0<><>::
+menu.gd::GDScript::9052747592183021699::1747964902::0::1::::<>CanvasLayer<><>0<>0<><>::
+menu_2.gd::GDScript::9110273117777536642::1747964710::0::1::::<>CanvasLayer<><>0<>0<><>::
+player.gd::GDScript::7663357184995404332::1747964711::0::1::::<>CharacterBody2D<><>0<>0<><>::
 sol.gd::GDScript/GDScript::5565433363052989634::1746204685::0::1::::<>StaticBody2D<><>0<>0<><>::
 static_body_2d.gd::GDScript/GDScript::6406127613937478032::1746204685::0::1::::<>StaticBody2D<><>0<>0<><>::
-::res://SFX/::1747958814
+::res://SFX/::1747958891
 clignotement.wav::AudioStreamWAV::5438227973544780870::1747953297::1747953514::1::::<><><>0<>0<>a3d8ceecc37e2b5647bfac7832ce2260<>res://.godot/imported/clignotement.wav-31570d42f378865c422baaacc8d3e35d.sample::
 ELECBuzz_Neon-ou-transfo-1-_ID-2118__LS.mp3::AudioStreamMP3::2693463348075423035::1747958751::1747958891::1::::<><><>0<>0<>c3069864b55c71e4873fde2aae3154ec<>res://.godot/imported/ELECBuzz_Neon-ou-transfo-1-_ID-2118__LS.mp3-8d08aa44bf0b44aa9d84b1e451cf5168.mp3str::
 interupteur.wav::AudioStreamWAV::5909170331340298488::1747953361::1747953514::1::::<><><>0<>0<>50066223e6790c3605db432f35692b89<>res://.godot/imported/interupteur.wav-91360d2833dfd75ee0245d99387ec708.sample::

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnpugvblpnqgf"]
+[gd_scene load_steps=5 format=3 uid="uid://bnpugvblpnqgf"]
 
 [ext_resource type="Script" uid="uid://d18hovlm31dt8" path="res://Scripts/menu.gd" id="1_1rerr"]
 [ext_resource type="Texture2D" uid="uid://62r1gt6wam3c" path="res://Assets/microships.png" id="2_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://d2628a2bt4kw0" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="3_cayip"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cayip"]
 animations = [{
@@ -11,6 +12,19 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cayip")
+}],
+"loop": true,
+"name": &"info",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"microships",
 "speed": 5.0
 }]
 
@@ -24,15 +38,15 @@ color = Color(1, 1, 1, 0.329412)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(201.75, 187.25)
+position = Vector2(428, 186)
 scale = Vector2(0.964063, 1.10278)
 sprite_frames = SubResource("SpriteFrames_cayip")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 64.0
-offset_top = 108.0
-offset_right = 191.0
-offset_bottom = 261.0
+offset_left = 288.0
+offset_top = 107.0
+offset_right = 415.0
+offset_bottom = 260.0
 theme_override_constants/separation = 30
 alignment = 1
 
@@ -54,4 +68,6 @@ text = "
 "
 flat = true
 
+[connection signal="pressed" from="VBoxContainer/microships" to="." method="_on_microships_pressed"]
+[connection signal="pressed" from="VBoxContainer/info" to="." method="_on_info_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]

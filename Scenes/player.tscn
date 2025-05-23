@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=24 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://db6686aeeqaf3" path="res://Assets/New Piskel (11).png" id="1_pu2lt"]
 [ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_vgqql"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cu17fvv5puhmb" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="6_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://d2628a2bt4kw0" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="7_gymyn"]
 [ext_resource type="Texture2D" uid="uid://bhlfqcsjvokem" path="res://Assets/perso_chroma_requiem (55) copie 2.png" id="8_pu2lt"]
+[ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="15_h4iuc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tx1dd"]
 animations = [{
@@ -177,5 +178,7 @@ metadata/_edit_group_ = true
 [node name="AttackTimer" type="Timer" parent="CharacterBody2D"]
 wait_time = 0.3
 one_shot = true
+
+[node name="pause" parent="." instance=ExtResource("15_h4iuc")]
 
 [connection signal="timeout" from="CharacterBody2D/AttackTimer" to="CharacterBody2D" method="_on_attack_timer_timeout"]
