@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=25 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://db6686aeeqaf3" path="res://Assets/New Piskel (11).png" id="1_pu2lt"]
 [ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_vgqql"]
@@ -6,14 +6,15 @@
 [ext_resource type="Script" uid="uid://cbbr5680mc0h6" path="res://Scripts/area_2d_2.gd" id="3_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="3_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://b4n37wvhjhguh" path="res://Assets/perso_final copie.png" id="3_tx1dd"]
-[ext_resource type="Texture2D" uid="uid://cbmbtn2bsfnvf" path="res://Assets/perso_final copie 3.png" id="4_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="4_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://2fwvbonmu2vc" path="res://Assets/perso_chroma_requiem (55) copie 4.png" id="5_f1ek2"]
 [ext_resource type="Texture2D" uid="uid://33v312kgomtn" path="res://Assets/perso_final copie 2.png" id="5_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://cw5w3m5yxvgyl" path="res://Assets/perso_final.png" id="6_gymyn"]
 [ext_resource type="Texture2D" uid="uid://cu17fvv5puhmb" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="6_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://d2628a2bt4kw0" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="7_gymyn"]
+[ext_resource type="Texture2D" uid="uid://jy4pukda083b" path="res://Assets/yellow2.png" id="8_fd4e3"]
 [ext_resource type="Texture2D" uid="uid://bhlfqcsjvokem" path="res://Assets/perso_chroma_requiem (55) copie 2.png" id="8_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://cghan0t2i044u" path="res://Assets/yellow1.png" id="9_qqcod"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="15_h4iuc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tx1dd"]
@@ -70,7 +71,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_tx1dd")
+"texture": ExtResource("8_fd4e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qqcod")
 }],
 "loop": true,
 "name": &"idle_right",
@@ -127,6 +131,7 @@ position = Vector2(-285, -149)
 position = Vector2(606.469, 329.836)
 scale = Vector2(0.99541, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
+frame_progress = 0.387539
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -166,7 +171,7 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"atk1_right"
+animation = &"idle_right"
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 
