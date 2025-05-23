@@ -1,34 +1,25 @@
-[gd_scene load_steps=8 format=3 uid="uid://conjm8qi1agyb"]
+[gd_scene load_steps=11 format=3 uid="uid://conjm8qi1agyb"]
 
 [ext_resource type="Texture2D" uid="uid://ch5a857yv07c2" path="res://Assets/credits.png" id="1_i8h6y"]
 [ext_resource type="Script" uid="uid://qh43pbria0h4" path="res://Scripts/animation_player.gd" id="2_xbebw"]
 [ext_resource type="Texture2D" uid="uid://csc4p61uc2f3l" path="res://Assets/SplashScreen.png" id="3_7xmno"]
+[ext_resource type="AudioStream" uid="uid://bemy7hxh3r7gh" path="res://SFX/ELECBuzz_Neon-ou-transfo-1-_ID-2118__LS.mp3" id="3_f64u0"]
+[ext_resource type="AudioStream" uid="uid://cjqk25eynrsqg" path="res://SFX/clignotement.wav" id="4_iynit"]
+[ext_resource type="AudioStream" uid="uid://cqgpf3367prki" path="res://SFX/interupteur.wav" id="5_f64u0"]
 
 [sub_resource type="Animation" id="Animation_7xmno"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath("../AnimationPlayer/AudioStreamPlayer2D:volume_db")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../splashScreen:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_xbebw"]
@@ -58,10 +49,36 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(1, 0, 1, 1), Color(1, 1, 1, 1)]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimationPlayer/AudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.06667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimationPlayer/AudioStreamPlayer2D:volume_db")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.96667, 4.03333),
+"transitions": PackedFloat32Array(1, 0.933033),
+"update": 0,
+"values": [-80.0, -25.214]
+}
 
 [sub_resource type="Animation" id="Animation_uy3b0"]
 resource_name = "play"
-length = 2.7
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -69,10 +86,52 @@ tracks/0/path = NodePath("../splashScreen:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.3, 1.32, 1.53333, 1.54, 1.56, 1.8, 1.83333, 2.2, 2.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.3, 1.32, 1.53333, 1.54, 1.56, 1.8, 1.83333, 2.2, 3, 3.06667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(1, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(0, 0, 0, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(1, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(0.105882, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimationPlayer/AudioStreamPlayer2D2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.26667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimationPlayer/AudioStreamPlayer2D3")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimationPlayer/AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stop"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uy3b0"]
@@ -85,7 +144,6 @@ _data = {
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="credit" type="TextureRect" parent="."]
-modulate = Color(0, 0, 0, 1)
 texture_filter = 1
 offset_right = 40.0
 offset_bottom = 40.0
@@ -98,12 +156,19 @@ libraries = {
 }
 script = ExtResource("2_xbebw")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AnimationPlayer"]
+stream = ExtResource("3_f64u0")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="AnimationPlayer"]
+stream = ExtResource("4_iynit")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="AnimationPlayer"]
+stream = ExtResource("5_f64u0")
+
 [node name="splashScreen" type="TextureRect" parent="."]
-modulate = Color(1, 1, 1, 0)
-offset_left = -2.0
-offset_top = 3.0
-offset_right = 641.0
-offset_bottom = 363.0
+modulate = Color(0.634997, 0.634997, 0.634997, 0)
+offset_right = 640.0
+offset_bottom = 360.0
 texture = ExtResource("3_7xmno")
 
 [node name="play" type="Button" parent="splashScreen"]

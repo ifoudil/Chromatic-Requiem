@@ -1,6 +1,9 @@
+AudioStreamPlayer
+Node
+AudioStreamPlayer2D
+ColorRect
 Button
 TextureRect
-ColorRect
 AnimationPlayer
 CanvasLayer
 VBoxContainer

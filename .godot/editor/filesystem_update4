@@ -1,6 +1,13 @@
-res://Scenes/player.tscn
 res://Scenes/menu.tscn
+res://Scenes/player.tscn
 res://Scenes/menu_2.tscn
 res://Scenes/Baddie.tscn
 res://Scenes/Credits.tscn
+res://Scripts/area_2d.gd
+res://Scripts/area_2d_2.gd
 res://Scripts/animation_player.gd
+res://scripts/animation_player.gd
+res://scripts/area_2d.gd
+res://scripts/menu.gd
+res://scripts/menu_2.gd
+res://Scripts/player.gd
