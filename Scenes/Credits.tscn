@@ -126,12 +126,24 @@ tracks/3/path = NodePath("../AnimationPlayer/AudioStreamPlayer2D")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.2),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"stop"
 }]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AnimationPlayer/AudioStreamPlayer2D:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-25.214, -25.214, -80.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uy3b0"]
@@ -144,6 +156,7 @@ _data = {
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="credit" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
 texture_filter = 1
 offset_right = 40.0
 offset_bottom = 40.0
@@ -166,7 +179,7 @@ stream = ExtResource("4_iynit")
 stream = ExtResource("5_f64u0")
 
 [node name="splashScreen" type="TextureRect" parent="."]
-modulate = Color(0.634997, 0.634997, 0.634997, 0)
+modulate = Color(1, 0.615385, 0.615385, 1)
 offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("3_7xmno")
