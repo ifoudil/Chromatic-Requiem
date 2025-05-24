@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=21 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_d082v"]
@@ -12,10 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://2fwvbonmu2vc" path="res://Assets/perso_chroma_requiem (55) copie 4.png" id="9_rh60s"]
 [ext_resource type="Texture2D" uid="uid://euqvvc4u41vj" path="res://Assets/reloading.png" id="10_7gbtx"]
 [ext_resource type="Texture2D" uid="uid://cu17fvv5puhmb" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="10_dvvgx"]
-[ext_resource type="Texture2D" uid="uid://blxl6vodvwtp0" path="res://Assets/walk-rightY2.png" id="11_kqjl2"]
 [ext_resource type="Texture2D" uid="uid://d2628a2bt4kw0" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="11_p42id"]
 [ext_resource type="Texture2D" uid="uid://bhlfqcsjvokem" path="res://Assets/perso_chroma_requiem (55) copie 2.png" id="12_5gadt"]
-[ext_resource type="Texture2D" uid="uid://c8ifljbinrq4o" path="res://Assets/walk-rightY.png" id="12_fevv3"]
+[ext_resource type="Texture2D" uid="uid://bsi1fl00w7vpc" path="res://Assets/ILF1.png" id="13_7kl0n"]
+[ext_resource type="Texture2D" uid="uid://da0rcvn5bqr33" path="res://Assets/ILF2.png" id="14_rvhxl"]
+[ext_resource type="Texture2D" uid="uid://bl3jftmpqelb8" path="res://Assets/IRF1.png" id="17_7kl0n"]
+[ext_resource type="Texture2D" uid="uid://d4hyxfh2ow37h" path="res://Assets/IRF2.png" id="18_rvhxl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xh4dr"]
 animations = [{
@@ -99,6 +101,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("13_7kl0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rvhxl")
+}],
+"loop": true,
+"name": &"run_left2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_p42id")
 }, {
 "duration": 1.0,
@@ -110,10 +123,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_kqjl2")
+"texture": ExtResource("17_7kl0n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_fevv3")
+"texture": ExtResource("18_rvhxl")
 }],
 "loop": true,
 "name": &"run_right2",
