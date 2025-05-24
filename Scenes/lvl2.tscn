@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bycoicfh3g6sp"]
+
+[ext_resource type="Texture2D" uid="uid://bg325a1xyfjxm" path="res://Assets/fond_scene1.png" id="1_yo6rb"]
+[ext_resource type="PackedScene" uid="uid://cdyetyvyljpk" path="res://Scenes/baddieViolet.tscn" id="2_yo6rb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
+size = Vector2(1629, 285)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1kij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yo6rb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxj74"]
+size = Vector2(640, 61)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(3, 64)
+
+[node name="Area2D2" type="StaticBody2D" parent="."]
+position = Vector2(319, 281)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(497.5, 652.5)
+shape = SubResource("RectangleShape2D_gw65t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(762, 452)
+sprite_frames = SubResource("SpriteFrames_k1kij")
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(319, 260.5)
+shape = SubResource("RectangleShape2D_oxj74")
+
+[node name="characterBody2D" parent="." instance=ExtResource("2_yo6rb")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(316, 118)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.6
+drag_top_margin = 0.6
+drag_right_margin = 0.6
+drag_bottom_margin = 0.3
+editor_draw_drag_margin = true

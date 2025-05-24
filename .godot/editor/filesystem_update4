@@ -9,3 +9,17 @@ res://Scenes/Credits.tscn
 res://Scenes/pause.tscn
 res://Scenes/lvl1.tscn
 res://Scripts/player.gd
+res://scripts/animation_player.gd
+res://Scripts/animation_player.gd
+res://scripts/area_2d.gd
+res://Scripts/area_2d.gd
+res://area_2d_2.gd
+res://Scripts/area_2d_2.gd
+res://scripts/baddieYellow.gd
+res://scripts/menu.gd
+res://Scripts/menu.gd
+res://scripts/menu_2.gd
+res://Scripts/menu_2.gd
+res://scripts/pause.gd
+res://Scenes/lvl2.tscn
+res://scripts/baddie_violet.gd
