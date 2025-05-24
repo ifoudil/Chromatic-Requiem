@@ -31,12 +31,15 @@ func _physics_process(delta):
 	velocity.x = lerp(velocity.x, direction * speed, acceleration)
 	update_animation(direction)
 	move_and_slide()
-
+	
 func update_animation(direction):
 	if is_attacking:
 		sprite.play("atk1_right" if facing_right else "atk1_left")
 	elif is_on_floor():
-		sprite.play("idle_right" if direction == 0 else "run_right" if facing_right else "run_left")
+		if direction == 0:
+			sprite.play("idle_right" if facing_right else "idle_left")
+		else:
+			sprite.play("run_right" if facing_right else "run_left")
 	else:
 		sprite.play("jump_right" if facing_right else "jump_left")
 

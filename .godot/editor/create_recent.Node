@@ -1,3 +1,5 @@
+AudioStreamPlayer
+AudioStreamPlayer2D
 Timer
 StaticBody2D
 Area2D
@@ -8,8 +10,5 @@ Button
 TextureRect
 ColorRect
 CanvasLayer
-AudioStreamPlayer
 Node
-AudioStreamPlayer2D
 AnimationPlayer
-VBoxContainer

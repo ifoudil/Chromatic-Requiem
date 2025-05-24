@@ -10,7 +10,11 @@ var controls_enabled = true
 # Variables d'animation et état
 @onready var sprite = $AnimatedSprite2D
 @onready var attack_timer = $AttackTimer
-@onready var transition_timer = $TransitionTimer  # Nouveau timer pour les transitions
+@onready var transition_timer = $TransitionTimer  # Timer pour les transitions
+@onready var audio_transition_phase1 = $AudioStreamPlayer1  # Son transition vers phase 1
+@onready var audio_phase1_start = $AudioStreamPlayer2       # Son début phase 1
+@onready var audio_transition_phase2 = $AudioStreamPlayer3  # Son transition vers phase 2
+@onready var audio_transition_normal = $AudioStreamPlayer4  # Son transition vers normal
 var facing_right = true
 var is_attacking = false
 
@@ -24,6 +28,8 @@ var reloading_time := 0.0
 var is_transitioning := false
 var current_gameplay_state := "normal"  # "normal", "phase1", "phase2"
 var next_gameplay_state := ""
+
+# Les sons sont maintenant directement assignés aux AudioStreamPlayer dans l'éditeur
 
 func _ready() -> void:
 	sprite.play("idle_right")
@@ -68,7 +74,7 @@ func _process(delta):
 		
 		if timer_started:
 			time_passed += delta
-			if time_passed >= 10.0:
+			if time_passed >= 4.0:
 				start_transition_to_phase2()
 		
 		if reloading_started:
@@ -81,7 +87,12 @@ func start_transition_to_phase1():
 	is_transitioning = true
 	next_gameplay_state = "phase1"
 	sprite.play("transition_to_phase1")  # Animation de transition
-	transition_timer.wait_time = 0.8  # Durée de la transition
+	
+	# Jouer le son de transition vers phase 1
+	if audio_transition_phase1:
+		audio_transition_phase1.play()
+	
+	transition_timer.wait_time = 1.6  # Durée de la transition
 	transition_timer.start()
 
 func start_transition_to_phase2():
@@ -90,7 +101,16 @@ func start_transition_to_phase2():
 	next_gameplay_state = "phase2"
 	timer_started = false
 	sprite.play("transition_to_phase2")  # Animation de transition
-	transition_timer.wait_time = 0.8  # Durée de la transition
+	
+	# Arrêter le son de la phase 1 s'il joue encore
+	if audio_phase1_start and audio_phase1_start.playing:
+		audio_phase1_start.stop()
+	
+	# Jouer le son de transition vers phase 2
+	if audio_transition_phase2:
+		audio_transition_phase2.play()
+	
+	transition_timer.wait_time = 1.6 # Durée de la transition
 	transition_timer.start()
 
 func start_transition_to_normal():
@@ -99,7 +119,12 @@ func start_transition_to_normal():
 	next_gameplay_state = "normal"
 	reloading_started = false
 	sprite.play("transition_to_normal")  # Animation de transition
-	transition_timer.wait_time = 1  # Durée de la transition
+	
+	# Jouer le son de transition vers normal
+	if audio_transition_normal:
+		audio_transition_normal.play()
+	
+	transition_timer.wait_time = 1.3  # Durée de la transition
 	transition_timer.start()
 
 func _on_transition_timer_timeout():
@@ -112,7 +137,11 @@ func _on_transition_timer_timeout():
 			current_gameplay_state = "phase1"
 			timer_started = true
 			time_passed = 0.0
-			# Effet visuel ou sonore optionnel
+			
+			# Jouer le son de début de phase 1
+			if audio_phase1_start:
+				audio_phase1_start.play()
+			
 		"phase2":
 			current_gameplay_state = "phase2"
 			reloading_started = true
@@ -126,32 +155,24 @@ func _on_transition_timer_timeout():
 	update_animation(0)  # 0 pour idle
 
 func update_animation(direction):
-	# Ne pas changer d'animation si on est en transition
 	if is_transitioning:
 		return
-	
+
 	# Déterminer le suffixe d'animation selon l'état
 	var anim_suffix = ""
 	match current_gameplay_state:
 		"phase1":
-			anim_suffix = "2"  # Phase 1 : animations avec suffixe 2
+			anim_suffix = "2"
 		"phase2":
-			anim_suffix = "3"  # Phase 2 : animations avec suffixe 3
+			anim_suffix = "3"
 		"normal":
-			anim_suffix = ""   # État normal : animations de base
-	
+			anim_suffix = ""
+
 	if is_attacking:
 		sprite.play("atk1_right" + anim_suffix if facing_right else "atk1_left" + anim_suffix)
 	elif is_on_floor():
 		if direction == 0:
-			# Pour l'idle, on gère spécialement les phases
-			match current_gameplay_state:
-				"phase1":
-					sprite.play("idle-right2")  # Animation spéciale idle
-				"phase2":
-					sprite.play("reloading")  # Animation de reloading
-				"normal":
-					sprite.play("idle_right")  # Animation normale
+			sprite.play("idle_right" + anim_suffix if facing_right else "idle_left" + anim_suffix)
 		else:
 			sprite.play("run_right" + anim_suffix if facing_right else "run_left" + anim_suffix)
 	else:
