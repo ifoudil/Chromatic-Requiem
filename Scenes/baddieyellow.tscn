@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=19 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_d082v"]
@@ -12,8 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://2fwvbonmu2vc" path="res://Assets/perso_chroma_requiem (55) copie 4.png" id="9_rh60s"]
 [ext_resource type="Texture2D" uid="uid://euqvvc4u41vj" path="res://Assets/reloading.png" id="10_7gbtx"]
 [ext_resource type="Texture2D" uid="uid://cu17fvv5puhmb" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="10_dvvgx"]
+[ext_resource type="Texture2D" uid="uid://blxl6vodvwtp0" path="res://Assets/walk-rightY2.png" id="11_kqjl2"]
 [ext_resource type="Texture2D" uid="uid://d2628a2bt4kw0" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="11_p42id"]
 [ext_resource type="Texture2D" uid="uid://bhlfqcsjvokem" path="res://Assets/perso_chroma_requiem (55) copie 2.png" id="12_5gadt"]
+[ext_resource type="Texture2D" uid="uid://c8ifljbinrq4o" path="res://Assets/walk-rightY.png" id="12_fevv3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xh4dr"]
 animations = [{
@@ -105,6 +107,17 @@ animations = [{
 "loop": true,
 "name": &"run_right",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_kqjl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fevv3")
+}],
+"loop": true,
+"name": &"run_right2",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpk7j"]
@@ -120,7 +133,7 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"run_right"
+animation = &"run_right2"
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 

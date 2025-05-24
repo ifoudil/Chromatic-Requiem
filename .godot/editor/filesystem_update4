@@ -8,3 +8,4 @@ res://Scenes/Baddie.tscn
 res://Scenes/Credits.tscn
 res://Scenes/pause.tscn
 res://Scenes/lvl1.tscn
+res://Scripts/player.gd
