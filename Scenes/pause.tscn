@@ -20,8 +20,8 @@ script = ExtResource("1_l2mpd")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(576.5, 61)
-scale = Vector2(1.23438, 1.125)
+position = Vector2(612, 35)
+scale = Vector2(0.640625, 0.632812)
 sprite_frames = SubResource("SpriteFrames_q85f0")
 
 [node name="pause" type="Button" parent="."]
@@ -29,10 +29,12 @@ modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 542.0
-offset_top = 31.0
-offset_right = -41.0
-offset_bottom = -271.0
+offset_left = 593.0
+offset_top = 16.0
+offset_right = -17.0
+offset_bottom = -308.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1

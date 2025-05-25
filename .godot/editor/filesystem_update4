@@ -1,6 +1,4 @@
 res://Scenes/player.tscn
-res://Scenes/menu.tscn
-res://Scenes/menu_2.tscn
 res://Scenes/Baddie.tscn
 res://Scenes/Credits.tscn
 res://Scenes/pause.tscn
@@ -8,4 +6,6 @@ res://Scenes/lvl1.tscn
 res://Scenes/baddieyellow.tscn
 res://Scenes/baddieViolet.tscn
 res://Scenes/lvl2.tscn
+res://Scenes/projectile.tscn
+res://Scripts/projectile.gd
 res://Scripts/baddieYellow.gd

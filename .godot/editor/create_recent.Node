@@ -1,9 +1,10 @@
-AudioStreamPlayer
-AudioStreamPlayer2D
 Timer
-StaticBody2D
 Area2D
 CollisionShape2D
+Sprite2D
+AudioStreamPlayer
+AudioStreamPlayer2D
+StaticBody2D
 AnimatedSprite2D
 Camera2D
 Button
@@ -11,4 +12,3 @@ TextureRect
 ColorRect
 CanvasLayer
 Node
-AnimationPlayer

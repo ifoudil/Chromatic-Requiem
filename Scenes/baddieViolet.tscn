@@ -97,18 +97,16 @@ animations = [{
 size = Vector2(60, 113)
 
 [node name="characterBody2D" type="CharacterBody2D"]
-position = Vector2(31, -28)
+position = Vector2(38, -35)
 script = ExtResource("1_tdr17")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"atk1_right"
+animation = &"atk1_left"
 offset = Vector2(-387.769, 192.548)
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(169, 246.5)

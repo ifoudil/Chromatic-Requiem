@@ -19,6 +19,12 @@ var controls_enabled = true
 var facing_right = true
 var is_attacking = false
 
+# Variables pour les projectiles
+@onready var projectile_area = $projectile # Ton Area2D déjà positionné
+var is_shooting_projectiles = false
+var projectile_initial_position: Vector2
+var has_shot_this_frame = false  # Pour éviter les tirs multiples
+
 # Variables pour le système d'idle spécial
 var timer_started := false
 var time_passed := 0.0
@@ -34,6 +40,16 @@ func _ready() -> void:
 	sprite.play("idle_right")
 	if not transition_timer.timeout.is_connected(_on_transition_timer_timeout):
 		transition_timer.timeout.connect(_on_transition_timer_timeout)
+	
+	# Connecter les signaux d'animation
+	if not sprite.animation_finished.is_connected(_on_animation_finished):
+		sprite.animation_finished.connect(_on_animation_finished)
+	if not sprite.frame_changed.is_connected(_on_frame_changed):
+		sprite.frame_changed.connect(_on_frame_changed)
+	
+	# Sauvegarder la position initiale du projectile
+	if projectile_area:
+		projectile_initial_position = projectile_area.position
 
 func _physics_process(delta):
 	# Gravité (toujours appliquée)
@@ -62,6 +78,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("atk") and !is_attacking:
 		is_attacking = true
 		attack_timer.start()
+		
+		# Si on est en phase1, préparer le tir de projectiles
+		if current_gameplay_state == "phase1":
+			is_shooting_projectiles = true
+			has_shot_this_frame = false  # Reset pour la nouvelle attaque
 	
 	# Mouvement horizontal
 	if direction != 0:
@@ -96,6 +117,48 @@ func _process(delta):
 			# La transition vers normal ne peut se faire QUE si on est au sol
 			if reloading_time >= 4.0 and is_on_floor():
 				start_transition_to_normal()
+
+func _on_frame_changed():
+	"""Appelée à chaque changement de frame d'animation"""
+	# Vérifier si on est dans l'animation d'attaque phase1
+	if is_shooting_projectiles and sprite.animation == ("atk1_right2" if facing_right else "atk1_left2"):
+		# Méthode simplifiée : tirer à la frame 2 ou 3 (ajuste selon ton animation)
+		var target_frame = 2  # Ajuste cette valeur selon ta frame de tir
+		
+		if sprite.frame == target_frame and not has_shot_this_frame:
+			shoot_projectile()
+			has_shot_this_frame = true
+
+func _on_animation_finished():
+	"""Appelée quand une animation se termine"""
+	# Reset le flag pour permettre un nouveau tir à la prochaine animation
+	if sprite.animation == ("atk1_right2" if facing_right else "atk1_left2"):
+		has_shot_this_frame = false
+
+func shoot_projectile():
+	"""Lance le projectile depuis sa position initiale"""
+	if not projectile_area:
+		print("Aucun Area2D de projectile trouvé!")
+		return
+	
+	print("Tir de projectile!")  # Debug
+	
+	# Remettre le projectile à sa position initiale
+	projectile_area.position = projectile_initial_position
+	projectile_area.visible = true  # S'assurer qu'il est visible
+	
+	# Configurer la direction du projectile selon le regard du personnage
+	var direction = 1 if facing_right else -1
+	
+	# Si ton projectile a une méthode pour définir sa direction
+	if projectile_area.has_method("launch"):
+		projectile_area.launch(direction)
+		print("Méthode launch appelée avec direction: ", direction)
+	elif projectile_area.has_method("set_direction"):
+		projectile_area.set_direction(direction)
+		print("Méthode set_direction appelée avec direction: ", direction)
+	else:
+		print("Aucune méthode de lancement trouvée sur le projectile")
 
 func start_transition_to_phase1():
 	"""Démarre la transition vers la phase 1 (seulement au sol)"""
@@ -167,6 +230,8 @@ func _on_transition_timer_timeout():
 			reloading_time = 0.0
 		"normal":
 			current_gameplay_state = "normal"
+			# Arrêter les projectiles si on revient en mode normal
+			is_shooting_projectiles = false
 
 func update_animation(direction):
 	# Si on est en transition, laisser l'animation de transition
@@ -195,3 +260,6 @@ func update_animation(direction):
 
 func _on_attack_timer_timeout():
 	is_attacking = false
+	# Arrêter les projectiles quand l'attaque se termine
+	is_shooting_projectiles = false
+	has_shot_this_frame = false
