@@ -87,6 +87,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_rt5qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rt5qn")
 }],
 "loop": true,
 "name": &"atk1_right2",
@@ -354,7 +357,7 @@ position = Vector2(170, 240)
 shape = SubResource("RectangleShape2D_wpk7j")
 
 [node name="AttackTimer" type="Timer" parent="."]
-wait_time = 0.621
+wait_time = 0.711
 one_shot = true
 
 [node name="TransitionTimer" type="Timer" parent="."]

@@ -11,3 +11,7 @@ func _on_pause_pressed() -> void:
 		add_child(menu)  # On ajoute le menu à CanvasLayer → il apparaît + interactif
 	else:
 		remove_child(menu)  # On enlève le menu → il disparaît + plus d’interaction
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/player.tscn")

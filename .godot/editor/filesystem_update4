@@ -9,3 +9,4 @@ res://Scenes/lvl2.tscn
 res://Scenes/projectile.tscn
 res://Scripts/projectile.gd
 res://Scripts/baddieYellow.gd
+res://Scripts/pause.gd
