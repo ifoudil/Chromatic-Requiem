@@ -106,7 +106,7 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"idle_right"
+animation = &"atk1_right"
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 

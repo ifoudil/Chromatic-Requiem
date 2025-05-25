@@ -88,7 +88,7 @@ func _process(delta):
 		if timer_started:
 			time_passed += delta
 			# La transition vers phase2 ne peut se faire QUE si on est au sol
-			if time_passed >= 4.0 and is_on_floor():
+			if time_passed >= 20 and is_on_floor():
 				start_transition_to_phase2()
 		
 		if reloading_started:

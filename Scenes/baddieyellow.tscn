@@ -1,13 +1,17 @@
-[gd_scene load_steps=50 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=54 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_d082v"]
 [ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="3_7gbtx"]
 [ext_resource type="Texture2D" uid="uid://cmwhva4k4kd28" path="res://Assets/idleLeft2.png" id="4_0pfmo"]
+[ext_resource type="Texture2D" uid="uid://cjbaxh21eoapj" path="res://Assets/atkY.png" id="4_k8nak"]
+[ext_resource type="Texture2D" uid="uid://bvrm3va76imxd" path="res://Assets/atkY2.png" id="5_e4lae"]
 [ext_resource type="Texture2D" uid="uid://egvon7gs1o1h" path="res://Assets/IRYF.png" id="5_uulmi"]
 [ext_resource type="Texture2D" uid="uid://lwfxg530t7ui" path="res://Assets/IRYF2.png" id="6_e5twx"]
+[ext_resource type="Texture2D" uid="uid://77yv71eb6xo4" path="res://Assets/atkY3.png" id="6_rt5qn"]
 [ext_resource type="Texture2D" uid="uid://ubmkfv4c8p3k" path="res://Assets/idleLeft.png" id="7_1vvjq"]
 [ext_resource type="Texture2D" uid="uid://33v312kgomtn" path="res://Assets/perso_final copie 2.png" id="7_7kl0n"]
+[ext_resource type="Texture2D" uid="uid://h5favmv3v7en" path="res://Assets/atkY4.png" id="7_ov87t"]
 [ext_resource type="Texture2D" uid="uid://bv1qy2v382wd6" path="res://Assets/idle-r.png" id="7_p42id"]
 [ext_resource type="Texture2D" uid="uid://cw5w3m5yxvgyl" path="res://Assets/perso_final.png" id="8_rvhxl"]
 [ext_resource type="Texture2D" uid="uid://dgui3uyoynjvx" path="res://Assets/reloIR.png" id="8_tqy3j"]
@@ -65,6 +69,23 @@ animations = [{
 "loop": true,
 "name": &"atk1_right",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k8nak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e4lae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rt5qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ov87t")
+}],
+"loop": true,
+"name": &"atk1_right2",
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -320,8 +341,7 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"transition_to_normal"
-frame_progress = 0.0345931
+animation = &"atk1_right2"
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 
@@ -330,7 +350,6 @@ position = Vector2(169, 246.5)
 shape = SubResource("RectangleShape2D_wpk7j")
 
 [node name="AttackTimer" type="Timer" parent="."]
-wait_time = 0.3
 one_shot = true
 
 [node name="TransitionTimer" type="Timer" parent="."]
