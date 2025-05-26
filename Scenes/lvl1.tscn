@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://gxmrwxxp2xch"]
+[gd_scene load_steps=7 format=3 uid="uid://gxmrwxxp2xch"]
 
 [ext_resource type="Texture2D" uid="uid://cbe8ipr8co47j" path="res://Assets/lvl1.png" id="1_k1kij"]
 [ext_resource type="PackedScene" uid="uid://dc2uygkwfcu8w" path="res://Scenes/baddieyellow.tscn" id="2_ilbed"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
 size = Vector2(1533.5, 285)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1kij"]
+size = Vector2(31, 982)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxj74"]
 size = Vector2(640, 61)
@@ -28,6 +31,14 @@ position = Vector2(447.25, 785)
 shape = SubResource("RectangleShape2D_gw65t")
 
 [node name="Area2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1550, 435)
+shape = SubResource("RectangleShape2D_k1kij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-17.5, 426)
+shape = SubResource("RectangleShape2D_k1kij")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(319, 260.5)

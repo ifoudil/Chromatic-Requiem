@@ -1,11 +1,13 @@
-[gd_scene load_steps=61 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=63 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
-[ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_d082v"]
+[ext_resource type="Texture2D" uid="uid://drf5m4uudo2pg" path="res://Assets/atkleft2.png" id="2_5p88r"]
+[ext_resource type="Texture2D" uid="uid://ccyqhh7p1px6r" path="res://Assets/atkleft22.png" id="3_0mfcc"]
 [ext_resource type="Texture2D" uid="uid://xixmjvy3apgj" path="res://Assets/atkright2.png" id="3_k58fw"]
 [ext_resource type="Texture2D" uid="uid://cmwhva4k4kd28" path="res://Assets/idleLeft2.png" id="4_0pfmo"]
 [ext_resource type="Texture2D" uid="uid://cjbaxh21eoapj" path="res://Assets/atkY.png" id="4_k8nak"]
 [ext_resource type="Texture2D" uid="uid://cmtfagmfadomp" path="res://Assets/atkright22.png" id="4_x8rv7"]
+[ext_resource type="Texture2D" uid="uid://dso02lus8gaul" path="res://Assets/atkleft222.png" id="4_ykpft"]
 [ext_resource type="Texture2D" uid="uid://tddtjcnrrcyw" path="res://Assets/atkright222.png" id="5_dfrr3"]
 [ext_resource type="Texture2D" uid="uid://bvrm3va76imxd" path="res://Assets/atkY2.png" id="5_e4lae"]
 [ext_resource type="Texture2D" uid="uid://egvon7gs1o1h" path="res://Assets/IRYF.png" id="5_uulmi"]
@@ -63,7 +65,19 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_d082v")
+"texture": ExtResource("2_5p88r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5p88r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0mfcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0mfcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ykpft")
 }],
 "loop": true,
 "name": &"atk1_left",
@@ -365,7 +379,7 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"idle_left"
+animation = &"atk1_left"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
