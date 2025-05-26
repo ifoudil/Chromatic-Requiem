@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://1yw2wwk40nga"]
+
+[ext_resource type="Script" uid="uid://cdkutwc758j3f" path="res://scripts/fleche.gd" id="1_kqsui"]
+[ext_resource type="Texture2D" uid="uid://b433d70kmbr1x" path="res://Assets/projectile2.png" id="2_d3yu3"]
+[ext_resource type="Texture2D" uid="uid://dma34ivnchnev" path="res://Assets/projectile.png" id="2_he104"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8ysl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d3yu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_he104")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3yu3"]
+size = Vector2(9.79371, 25.4235)
+
+[node name="fleche" type="Area2D"]
+texture_filter = 1
+rotation = -0.0294614
+script = ExtResource("1_kqsui")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(349.188, 279.868)
+rotation = 0.00626836
+scale = Vector2(2.40229, 1.66211)
+sprite_frames = SubResource("SpriteFrames_i8ysl")
+frame_progress = 0.948675
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(354.977, 277.577)
+rotation = -1.57702
+scale = Vector2(1.66218, 2.40224)
+skew = 0.00651026
+shape = SubResource("RectangleShape2D_d3yu3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

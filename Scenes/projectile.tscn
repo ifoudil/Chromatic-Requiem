@@ -7,6 +7,7 @@
 size = Vector2(17.6716, 11.3778)
 
 [node name="projectile" type="Area2D"]
+rotation = 0.000539736
 script = ExtResource("1_yr2qt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

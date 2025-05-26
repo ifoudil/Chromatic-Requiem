@@ -17,14 +17,23 @@ var controls_enabled = true
 @onready var audio_transition_phase2 = $AudioStreamPlayer3
 @onready var audio_transition_normal = $AudioStreamPlayer4
 @onready var audio_atk_surchage = $AudioStreamPlayer5
+@onready var audio_atk_normal = $AudioStreamPlayer6
 var facing_right = true
 var is_attacking = false
 
-# Variables pour les projectiles
-@onready var projectile_area = $projectile # Ton Area2D déjà positionné
+@onready var projectile_area = $projectile
+@onready var fleche_area = $fleche 
+@onready var play_fleche = $fleche/AnimatedSprite2D
+@onready var shuriken_area = $shuriken # Ton Area2D pour le shuriken
 var is_shooting_projectiles = false
+var is_shooting_arrow = false
+var is_shooting_shuriken = false
 var projectile_initial_position: Vector2
+var fleche_initial_position: Vector2
+var shuriken_initial_position: Vector2
 var has_shot_this_frame = false  # Pour éviter les tirs multiples
+var has_shot_arrow_this_frame = false  # Pour éviter les tirs multiples de flèche
+var has_shot_shuriken_this_frame = false  # Pour éviter les tirs multiples de shuriken
 
 # Variables pour le système d'idle spécial
 var timer_started := false
@@ -48,9 +57,13 @@ func _ready() -> void:
 	if not sprite.frame_changed.is_connected(_on_frame_changed):
 		sprite.frame_changed.connect(_on_frame_changed)
 	
-	# Sauvegarder la position initiale du projectile
+	# Sauvegarder les positions initiales des projectiles
 	if projectile_area:
 		projectile_initial_position = projectile_area.position
+	if fleche_area:
+		fleche_initial_position = fleche_area.position
+	if shuriken_area:
+		shuriken_initial_position = shuriken_area.position
 
 func _physics_process(delta):
 	# Gravité (toujours appliquée)
@@ -87,7 +100,19 @@ func _physics_process(delta):
 		# Si on est en phase1, préparer le tir de projectiles
 		if current_gameplay_state == "phase1":
 			is_shooting_projectiles = true
-			has_shot_this_frame = false  # Reset pour la nouvelle attaque
+			has_shot_this_frame = false  
+		
+		if current_gameplay_state == "normal" and audio_atk_normal:
+			audio_atk_normal.play()
+		# Si on est en phase normale, préparer le tir de flèche
+		if current_gameplay_state == "normal":
+			is_shooting_arrow = true
+			has_shot_arrow_this_frame = false  # Reset pour la nouvelle attaque
+		
+		# Si on est en phase2, préparer le tir de shuriken
+		if current_gameplay_state == "phase2":
+			is_shooting_shuriken = true
+			has_shot_shuriken_this_frame = false  # Reset pour la nouvelle attaque
 	
 	# Mouvement horizontal
 	if direction != 0:
@@ -133,15 +158,42 @@ func _on_frame_changed():
 		if sprite.frame == target_frame and not has_shot_this_frame:
 			shoot_projectile()
 			has_shot_this_frame = true
+	
+	# Vérifier si on est dans l'animation d'attaque normale (pour la flèche)
+	if is_shooting_arrow and sprite.animation == ("atk1_right" if facing_right else "atk1_left"):
+		# Tirer la flèche à la frame 2 (ajuste selon ton animation)
+		var target_frame = 2  # Ajuste cette valeur selon ta frame de tir
+		
+		if sprite.frame == target_frame and not has_shot_arrow_this_frame:
+			play_fleche.play() 
+			shoot_arrow()
+			has_shot_arrow_this_frame = true
+	
+	# Vérifier si on est dans l'animation d'attaque phase2 (pour le shuriken)
+	if is_shooting_shuriken and sprite.animation == ("atk1_right3" if facing_right else "atk1_left3"):
+		# Tirer le shuriken à la frame 2 (ajuste selon ton animation)
+		var target_frame = 2  # Ajuste cette valeur selon ta frame de tir
+		
+		if sprite.frame == target_frame and not has_shot_shuriken_this_frame:
+			shoot_shuriken()
+			has_shot_shuriken_this_frame = true
 
 func _on_animation_finished():
 	"""Appelée quand une animation se termine"""
 	# Reset le flag pour permettre un nouveau tir à la prochaine animation
 	if sprite.animation == ("atk1_right2" if facing_right else "atk1_left2"):
 		has_shot_this_frame = false
+	
+	# Reset le flag pour la flèche
+	if sprite.animation == ("atk1_right" if facing_right else "atk1_left"):
+		has_shot_arrow_this_frame = false
+	
+	# Reset le flag pour le shuriken
+	if sprite.animation == ("atk1_right3" if facing_right else "atk1_left3"):
+		has_shot_shuriken_this_frame = false
 
 func shoot_projectile():
-	"""Lance le projectile depuis sa position initiale"""
+	"""Lance le projectile depuis sa position initiale (phase 1)"""
 	if not projectile_area:
 		print("Aucun Area2D de projectile trouvé!")
 		return
@@ -164,6 +216,56 @@ func shoot_projectile():
 		print("Méthode set_direction appelée avec direction: ", direction)
 	else:
 		print("Aucune méthode de lancement trouvée sur le projectile")
+
+func shoot_arrow():
+	"""Lance la flèche depuis sa position initiale (phase normale)"""
+	if not fleche_area:
+		print("Aucun Area2D de flèche trouvé!")
+		return
+	
+	print("Tir de flèche!")  # Debug
+	
+	# Remettre la flèche à sa position initiale
+	fleche_area.position = fleche_initial_position
+	fleche_area.visible = true  # S'assurer qu'elle est visible
+	
+	# Configurer la direction de la flèche selon le regard du personnage
+	var direction = 1 if facing_right else -1
+	
+	# Si ta flèche a une méthode pour définir sa direction
+	if fleche_area.has_method("launch"):
+		fleche_area.launch(direction)
+		print("Méthode launch appelée sur la flèche avec direction: ", direction)
+	elif fleche_area.has_method("set_direction"):
+		fleche_area.set_direction(direction)
+		print("Méthode set_direction appelée sur la flèche avec direction: ", direction)
+	else:
+		print("Aucune méthode de lancement trouvée sur la flèche")
+
+func shoot_shuriken():
+	"""Lance le shuriken depuis sa position initiale (phase 2)"""
+	if not shuriken_area:
+		print("Aucun Area2D de shuriken trouvé!")
+		return
+	
+	print("Tir de shuriken!")  # Debug
+	
+	# Remettre le shuriken à sa position initiale
+	shuriken_area.position = shuriken_initial_position
+	shuriken_area.visible = true  # S'assurer qu'il est visible
+	
+	# Configurer la direction du shuriken selon le regard du personnage
+	var direction = 1 if facing_right else -1
+	
+	# Si ton shuriken a une méthode pour définir sa direction
+	if shuriken_area.has_method("launch"):
+		shuriken_area.launch(direction)
+		print("Méthode launch appelée sur le shuriken avec direction: ", direction)
+	elif shuriken_area.has_method("set_direction"):
+		shuriken_area.set_direction(direction)
+		print("Méthode set_direction appelée sur le shuriken avec direction: ", direction)
+	else:
+		print("Aucune méthode de lancement trouvée sur le shuriken")
 
 func start_transition_to_phase1():
 	"""Démarre la transition vers la phase 1 (seulement au sol)"""
@@ -237,6 +339,8 @@ func _on_transition_timer_timeout():
 			current_gameplay_state = "normal"
 			# Arrêter les projectiles si on revient en mode normal
 			is_shooting_projectiles = false
+			is_shooting_arrow = false
+			is_shooting_shuriken = false
 
 func update_animation(direction):
 	# Si on est en transition, laisser l'animation de transition
@@ -265,6 +369,10 @@ func update_animation(direction):
 
 func _on_attack_timer_timeout():
 	is_attacking = false
-	# Arrêter les projectiles quand l'attaque se termine
+	# Arrêter les projectiles et flèches quand l'attaque se termine
 	is_shooting_projectiles = false
+	is_shooting_arrow = false
+	is_shooting_shuriken = false
 	has_shot_this_frame = false
+	has_shot_arrow_this_frame = false
+	has_shot_shuriken_this_frame = false

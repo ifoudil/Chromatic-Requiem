@@ -10,3 +10,5 @@ res://Scenes/projectile.tscn
 res://Scripts/projectile.gd
 res://Scripts/baddieYellow.gd
 res://Scripts/pause.gd
+res://scripts/fleche.gd
+res://Scenes/fleche.tscn

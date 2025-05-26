@@ -1,22 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://gxmrwxxp2xch"]
+[gd_scene load_steps=6 format=3 uid="uid://gxmrwxxp2xch"]
 
-[ext_resource type="Texture2D" uid="uid://bg325a1xyfjxm" path="res://Assets/fond_scene1.png" id="1_ilbed"]
+[ext_resource type="Texture2D" uid="uid://cbe8ipr8co47j" path="res://Assets/lvl1.png" id="1_k1kij"]
 [ext_resource type="PackedScene" uid="uid://dc2uygkwfcu8w" path="res://Scenes/baddieyellow.tscn" id="2_ilbed"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="3_k1kij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
-size = Vector2(1629, 285)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k1kij"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_ilbed")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+size = Vector2(1533.5, 285)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxj74"]
 size = Vector2(640, 61)
@@ -27,13 +16,16 @@ position = Vector2(3, 64)
 [node name="Area2D2" type="StaticBody2D" parent="."]
 position = Vector2(319, 281)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(497.5, 652.5)
-shape = SubResource("RectangleShape2D_gw65t")
+[node name="TextureRect" type="TextureRect" parent="Area2D2"]
+offset_left = -322.0
+offset_top = -344.0
+offset_right = 1214.0
+offset_bottom = 680.0
+texture = ExtResource("1_k1kij")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(762, 452)
-sprite_frames = SubResource("SpriteFrames_k1kij")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(447.25, 785)
+shape = SubResource("RectangleShape2D_gw65t")
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 
@@ -42,13 +34,14 @@ position = Vector2(319, 260.5)
 shape = SubResource("RectangleShape2D_oxj74")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ilbed")]
-position = Vector2(147, -72)
+position = Vector2(184, -85)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(169, 190)
+position = Vector2(168, 190)
 limit_left = 0
 limit_top = 0
-limit_right = 1400
+limit_right = 1500
+limit_bottom = 1015
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.6
@@ -57,11 +50,11 @@ drag_right_margin = 0.6
 drag_bottom_margin = 0.3
 editor_draw_drag_margin = true
 
-[node name="pause" parent="." instance=ExtResource("3_k1kij")]
-
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_left = 87.0
 offset_top = -56.0
 offset_right = 507.0
 offset_bottom = -2.0
 text = "press N to start transform  "
+
+[node name="pause" parent="." instance=ExtResource("3_k1kij")]

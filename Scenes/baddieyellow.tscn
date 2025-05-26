@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=61 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_d082v"]
@@ -56,6 +56,8 @@
 [ext_resource type="Texture2D" uid="uid://co7p3jy37q3u1" path="res://Assets/transiN10.png" id="42_0pfmo"]
 [ext_resource type="PackedScene" uid="uid://xsu756pb85ts" path="res://Scenes/projectile.tscn" id="52_e4lae"]
 [ext_resource type="AudioStream" uid="uid://bp2aagi4kibd1" path="res://SFX/laser.mp3" id="55_x8rv7"]
+[ext_resource type="AudioStream" uid="uid://b5hirqxorlpip" path="res://SFX/electric.mp3" id="56_ips37"]
+[ext_resource type="PackedScene" uid="uid://1yw2wwk40nga" path="res://Scenes/fleche.tscn" id="57_dfrr3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xh4dr"]
 animations = [{
@@ -72,13 +74,13 @@ animations = [{
 "texture": ExtResource("3_k58fw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_x8rv7")
+"texture": ExtResource("3_k58fw")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_x8rv7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_dfrr3")
+"texture": ExtResource("4_x8rv7")
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_dfrr3")
@@ -363,7 +365,7 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"atk1_right"
+animation = &"idle_left"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -398,8 +400,16 @@ pitch_scale = 0.98
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("55_x8rv7")
 
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("56_ips37")
+
 [node name="projectile" parent="." instance=ExtResource("52_e4lae")]
 position = Vector2(-6, -44)
+speed = 700
+
+[node name="fleche" parent="." instance=ExtResource("57_dfrr3")]
+position = Vector2(-132, -20)
+speed = 500
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="TransitionTimer" to="." method="_on_transition_timer_timeout"]
