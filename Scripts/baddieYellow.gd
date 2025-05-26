@@ -16,6 +16,7 @@ var controls_enabled = true
 @onready var audio_phase1_start = $AudioStreamPlayer2
 @onready var audio_transition_phase2 = $AudioStreamPlayer3
 @onready var audio_transition_normal = $AudioStreamPlayer4
+@onready var audio_atk_surchage = $AudioStreamPlayer5
 var facing_right = true
 var is_attacking = false
 
@@ -78,6 +79,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("atk") and !is_attacking:
 		is_attacking = true
 		attack_timer.start()
+		
+		# Jouer l'audio d'attaque spécifique à la phase 1
+		if current_gameplay_state == "phase1" and audio_atk_surchage:
+			audio_atk_surchage.play()
 		
 		# Si on est en phase1, préparer le tir de projectiles
 		if current_gameplay_state == "phase1":

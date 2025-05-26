@@ -1,12 +1,13 @@
+TextEdit
+AnimatedSprite2D
+AudioStreamPlayer
 Button
 Timer
 Area2D
 CollisionShape2D
 Sprite2D
-AudioStreamPlayer
 AudioStreamPlayer2D
 StaticBody2D
-AnimatedSprite2D
 Camera2D
 TextureRect
 ColorRect

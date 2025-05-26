@@ -46,6 +46,9 @@ position = Vector2(147, -72)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(169, 190)
+limit_left = 0
+limit_top = 0
+limit_right = 1400
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.6
@@ -55,3 +58,10 @@ drag_bottom_margin = 0.3
 editor_draw_drag_margin = true
 
 [node name="pause" parent="." instance=ExtResource("3_k1kij")]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 87.0
+offset_top = -56.0
+offset_right = 507.0
+offset_bottom = -2.0
+text = "press N to start transform  "
