@@ -16,6 +16,7 @@ animations = [{
 }]
 
 [node name="pause" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_l2mpd")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]

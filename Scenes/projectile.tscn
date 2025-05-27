@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkrgw3kd3n3xx" path="res://Assets/projectil.png" id="2_yr2qt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8cdk"]
-size = Vector2(17.6716, 11.3778)
+size = Vector2(17.7754, 11.4789)
 
 [node name="projectile" type="Area2D"]
 rotation = 0.000539736
@@ -12,12 +12,12 @@ script = ExtResource("1_yr2qt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(244, 270)
-scale = Vector2(2.34375, 2.375)
+position = Vector2(252.58, 280.695)
+scale = Vector2(2.07561, 2.04077)
 texture = ExtResource("2_yr2qt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
-position = Vector2(-1.67165, -0.711113)
+position = Vector2(-1.65243, -0.89669)
 shape = SubResource("RectangleShape2D_f8cdk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

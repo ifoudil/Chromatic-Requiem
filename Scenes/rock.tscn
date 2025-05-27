@@ -19,19 +19,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vd8au"]
+size = Vector2(13, 13.5)
 
 [node name="rock" type="Area2D"]
 script = ExtResource("1_vd8au")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(304, 243.25)
-scale = Vector2(2.46875, 2.46094)
+position = Vector2(325, 266)
+scale = Vector2(1.8125, 1.75)
 sprite_frames = SubResource("SpriteFrames_m11v4")
-frame_progress = 0.278024
+frame_progress = 0.456323
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(318, 231)
+position = Vector2(335, 256)
 shape = SubResource("RectangleShape2D_vd8au")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

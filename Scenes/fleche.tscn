@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3yu3"]
-size = Vector2(9.79371, 25.4235)
+size = Vector2(7.30237, 25.4235)
 
 [node name="fleche" type="Area2D"]
 texture_filter = 1
@@ -27,14 +27,14 @@ rotation = -0.0294614
 script = ExtResource("1_kqsui")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(349.188, 279.868)
+position = Vector2(354.002, 283.731)
 rotation = 0.00626836
-scale = Vector2(2.40229, 1.66211)
+scale = Vector2(2.2511, 1.54236)
 sprite_frames = SubResource("SpriteFrames_i8ysl")
-frame_progress = 0.814387
+frame_progress = 0.701273
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(354.977, 277.577)
+position = Vector2(359.857, 281.723)
 rotation = -1.57702
 scale = Vector2(1.66218, 2.40224)
 skew = 0.00651026

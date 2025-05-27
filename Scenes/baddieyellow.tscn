@@ -397,10 +397,12 @@ script = ExtResource("1_b0c5b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1109, -215.813)
-scale = Vector2(2.45023, 2.39583)
+position = Vector2(897.063, -122.12)
+scale = Vector2(1.89405, 1.90049)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"atk1_right3"
+animation = &"atk1_right"
+frame = 2
+frame_progress = 0.523487
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -439,15 +441,16 @@ stream = ExtResource("55_x8rv7")
 stream = ExtResource("56_ips37")
 
 [node name="projectile" parent="." instance=ExtResource("52_e4lae")]
-position = Vector2(-6, -44)
-speed = 700
+position = Vector2(-23, -53)
+speed = 800
 
 [node name="fleche" parent="." instance=ExtResource("57_dfrr3")]
-position = Vector2(-132, -20)
-speed = 500
+position = Vector2(-139, -26)
+speed = 600
 
 [node name="rock" parent="." instance=ExtResource("64_b4w3e")]
-position = Vector2(-87, 15)
+position = Vector2(-112, -11)
+speed = 300
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="TransitionTimer" to="." method="_on_transition_timer_timeout"]
