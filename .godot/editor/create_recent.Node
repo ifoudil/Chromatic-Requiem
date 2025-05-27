@@ -1,3 +1,6 @@
+Control
+ScrollContainer
+Panel
 CollisionShape2D
 AnimatedSprite2D
 Area2D
@@ -10,5 +13,3 @@ Timer
 AudioStreamPlayer2D
 StaticBody2D
 Camera2D
-ColorRect
-CanvasLayer

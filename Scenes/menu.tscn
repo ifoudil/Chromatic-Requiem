@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnpugvblpnqgf"]
+[gd_scene load_steps=6 format=3 uid="uid://bnpugvblpnqgf"]
 
 [ext_resource type="Script" uid="uid://d18hovlm31dt8" path="res://Scripts/menu.gd" id="1_1rerr"]
 [ext_resource type="Texture2D" uid="uid://62r1gt6wam3c" path="res://Assets/microships.png" id="2_xhh6f"]
-[ext_resource type="Texture2D" uid="uid://d2628a2bt4kw0" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="3_cayip"]
+[ext_resource type="Texture2D" uid="uid://c3mlyd171mlqh" path="res://Assets/info_.png" id="3_cayip"]
+[ext_resource type="Texture2D" uid="uid://bc7sdrbj00yfg" path="res://Assets/microship_pink.png" id="4_158mb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cayip"]
 animations = [{
@@ -22,9 +23,12 @@ animations = [{
 "name": &"info",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_158mb")
+}],
 "loop": true,
-"name": &"microships",
+"name": &"microship_pink",
 "speed": 5.0
 }]
 
@@ -41,6 +45,7 @@ texture_filter = 1
 position = Vector2(428, 186)
 scale = Vector2(0.964063, 1.10278)
 sprite_frames = SubResource("SpriteFrames_cayip")
+animation = &"microship_pink"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 288.0
@@ -68,6 +73,42 @@ text = "
 "
 flat = true
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="return" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 472.0
+offset_top = 239.0
+offset_right = 570.0
+offset_bottom = 270.0
+text = "
+"
+flat = true
+
+[node name="pink" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 296.0
+offset_top = 140.0
+offset_right = 353.0
+offset_bottom = 171.0
+text = "
+"
+flat = true
+
+[node name="yellow" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = 300.0
+offset_top = 170.0
+offset_right = 390.0
+offset_bottom = 201.0
+
 [connection signal="pressed" from="VBoxContainer/microships" to="." method="_on_microships_pressed"]
 [connection signal="pressed" from="VBoxContainer/info" to="." method="_on_info_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="Control/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Control/pink" to="." method="_on_pink_pressed"]

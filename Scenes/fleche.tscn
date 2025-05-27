@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://1yw2wwk40nga"]
 
-[ext_resource type="Script" uid="uid://cdkutwc758j3f" path="res://scripts/fleche.gd" id="1_kqsui"]
+[ext_resource type="Script" uid="uid://cdkutwc758j3f" path="res://Scripts/fleche.gd" id="1_kqsui"]
 [ext_resource type="Texture2D" uid="uid://b433d70kmbr1x" path="res://Assets/projectile2.png" id="2_d3yu3"]
 [ext_resource type="Texture2D" uid="uid://dma34ivnchnev" path="res://Assets/projectile.png" id="2_he104"]
 
