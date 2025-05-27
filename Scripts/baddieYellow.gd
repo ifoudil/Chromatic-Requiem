@@ -24,7 +24,8 @@ var is_attacking = false
 @onready var projectile_area = $projectile
 @onready var fleche_area = $fleche 
 @onready var play_fleche = $fleche/AnimatedSprite2D
-@onready var shuriken_area = $shuriken 
+@onready var shuriken_area = $rock
+@onready var play_rock = $rock/AnimatedSprite2D
 var is_shooting_projectiles = false
 var is_shooting_arrow = false
 var is_shooting_shuriken = false
@@ -139,13 +140,13 @@ func _process(delta):
 		if timer_started:
 			time_passed += delta
 			# La transition vers phase2 ne peut se faire QUE si on est au sol
-			if time_passed >= 15.0 and is_on_floor():
+			if time_passed >= 1.0 and is_on_floor():
 				start_transition_to_phase2()
 		
 		if reloading_started:
 			reloading_time += delta
 			# La transition vers normal ne peut se faire QUE si on est au sol
-			if reloading_time >= 10.0 and is_on_floor():
+			if reloading_time >= 7.0 and is_on_floor():
 				start_transition_to_normal()
 
 func _on_frame_changed():
@@ -175,6 +176,7 @@ func _on_frame_changed():
 		var target_frame = 2  # Ajuste cette valeur selon ta frame de tir
 		
 		if sprite.frame == target_frame and not has_shot_shuriken_this_frame:
+			play_rock.play() 
 			shoot_shuriken()
 			has_shot_shuriken_this_frame = true
 

@@ -1,8 +1,8 @@
 CollisionShape2D
-AudioStreamPlayer
 AnimatedSprite2D
-Sprite2D
 Area2D
+AudioStreamPlayer
+Sprite2D
 TextureRect
 TextEdit
 Button

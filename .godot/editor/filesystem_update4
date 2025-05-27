@@ -12,3 +12,5 @@ res://Scripts/baddieYellow.gd
 res://Scripts/pause.gd
 res://scripts/fleche.gd
 res://Scenes/fleche.tscn
+res://scripts/rock.gd
+res://Scenes/rock.tscn

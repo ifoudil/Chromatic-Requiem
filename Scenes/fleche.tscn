@@ -31,7 +31,7 @@ position = Vector2(349.188, 279.868)
 rotation = 0.00626836
 scale = Vector2(2.40229, 1.66211)
 sprite_frames = SubResource("SpriteFrames_i8ysl")
-frame_progress = 0.948675
+frame_progress = 0.814387
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(354.977, 277.577)

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://qx5m5vd6gg7x"]
+
+[ext_resource type="Script" uid="uid://lom2hjgrqmca" path="res://scripts/rock.gd" id="1_vd8au"]
+[ext_resource type="Texture2D" uid="uid://xfsvrqydspoi" path="res://Assets/rock.png" id="2_1rhfe"]
+[ext_resource type="Texture2D" uid="uid://bnfn6mjdqygbg" path="res://Assets/rock2.png" id="3_1np5q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m11v4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1rhfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1np5q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vd8au"]
+
+[node name="rock" type="Area2D"]
+script = ExtResource("1_vd8au")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(304, 243.25)
+scale = Vector2(2.46875, 2.46094)
+sprite_frames = SubResource("SpriteFrames_m11v4")
+frame_progress = 0.278024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(318, 231)
+shape = SubResource("RectangleShape2D_vd8au")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

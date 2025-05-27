@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=67 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
 [ext_resource type="Texture2D" uid="uid://drf5m4uudo2pg" path="res://Assets/atkleft2.png" id="2_5p88r"]
@@ -23,8 +23,11 @@
 [ext_resource type="Texture2D" uid="uid://lna5mwlbq73n" path="res://Assets/RLY.png" id="11_dqocq"]
 [ext_resource type="Texture2D" uid="uid://bewg40s6c2wsl" path="res://Assets/RLY2.png" id="12_dkgix"]
 [ext_resource type="Texture2D" uid="uid://n47r8gicult6" path="res://Assets/RLYF2.png" id="13_p8w0b"]
+[ext_resource type="Texture2D" uid="uid://dhffov7o342y6" path="res://Assets/atk_right3.png" id="13_v456s"]
+[ext_resource type="Texture2D" uid="uid://brrt4la1s1hxf" path="res://Assets/atk_right33.png" id="14_b4w3e"]
 [ext_resource type="Texture2D" uid="uid://caywas45o8jmg" path="res://Assets/RLYF.png" id="14_eor87"]
 [ext_resource type="Texture2D" uid="uid://m8md6fge8m0x" path="res://Assets/reloRL.png" id="15_dbx4j"]
+[ext_resource type="Texture2D" uid="uid://dlq5ib3lqnctf" path="res://Assets/atk_right333.png" id="15_j67vq"]
 [ext_resource type="Texture2D" uid="uid://cuc00pxf5jd37" path="res://Assets/reloRL2.png" id="16_55n0g"]
 [ext_resource type="Texture2D" uid="uid://fkw8vtx5qap6" path="res://Assets/RRYF.png" id="17_cuugi"]
 [ext_resource type="Texture2D" uid="uid://cdjd2p3vseg5a" path="res://Assets/RRY.png" id="17_p8w0b"]
@@ -60,6 +63,7 @@
 [ext_resource type="AudioStream" uid="uid://bp2aagi4kibd1" path="res://SFX/laser.mp3" id="55_x8rv7"]
 [ext_resource type="AudioStream" uid="uid://b5hirqxorlpip" path="res://SFX/electric.mp3" id="56_ips37"]
 [ext_resource type="PackedScene" uid="uid://1yw2wwk40nga" path="res://Scenes/fleche.tscn" id="57_dfrr3"]
+[ext_resource type="PackedScene" uid="uid://qx5m5vd6gg7x" path="res://Scenes/rock.tscn" id="64_b4w3e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xh4dr"]
 animations = [{
@@ -125,6 +129,23 @@ animations = [{
 "loop": true,
 "name": &"atk1_right2",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_v456s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_v456s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b4w3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_j67vq")
+}],
+"loop": true,
+"name": &"atk1_right3",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -379,7 +400,7 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"atk1_left"
+animation = &"atk1_right3"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -425,5 +446,9 @@ speed = 700
 position = Vector2(-132, -20)
 speed = 500
 
+[node name="rock" parent="." instance=ExtResource("64_b4w3e")]
+position = Vector2(-87, 15)
+
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="TransitionTimer" to="." method="_on_transition_timer_timeout"]
+[connection signal="body_entered" from="rock" to="." method="_on_body_entered"]
