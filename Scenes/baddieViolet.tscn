@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cdyetyvyljpk"]
+[gd_scene load_steps=24 format=3 uid="uid://cdyetyvyljpk"]
 
 [ext_resource type="Script" uid="uid://bgu1siu503xp7" path="res://Scripts/baddie_violet.gd" id="1_tdr17"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_tdr17"]
@@ -13,8 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://33v312kgomtn" path="res://Assets/perso_final copie 2.png" id="7_6y8ve"]
 [ext_resource type="Texture2D" uid="uid://dsf422vcxqyfa" path="res://Assets/baddieviolet3.png" id="7_j02qt"]
 [ext_resource type="Texture2D" uid="uid://cw5w3m5yxvgyl" path="res://Assets/perso_final.png" id="8_oaorr"]
+[ext_resource type="Texture2D" uid="uid://u68oan4m2bgu" path="res://Assets/atkviolet6.png" id="8_smshv"]
+[ext_resource type="Texture2D" uid="uid://dnpk6at7gk15p" path="res://Assets/atkviolet7.png" id="9_3m65n"]
 [ext_resource type="Texture2D" uid="uid://2fwvbonmu2vc" path="res://Assets/perso_chroma_requiem (55) copie 4.png" id="9_smshv"]
 [ext_resource type="Texture2D" uid="uid://cu17fvv5puhmb" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="10_3m65n"]
+[ext_resource type="Texture2D" uid="uid://hwfel6p8hawx" path="res://Assets/atkviolet8.png" id="10_74vap"]
+[ext_resource type="Texture2D" uid="uid://bhu6jddiw67rt" path="res://Assets/atkviolet9.png" id="11_3m65n"]
 [ext_resource type="Texture2D" uid="uid://d2628a2bt4kw0" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="11_74vap"]
 [ext_resource type="Texture2D" uid="uid://bhlfqcsjvokem" path="res://Assets/perso_chroma_requiem (55) copie 2.png" id="12_uijnq"]
 
@@ -43,10 +47,59 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_3m65n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_smshv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3m65n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_74vap")
 }],
 "loop": true,
 "name": &"atk1_right",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_74vap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3m65n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_smshv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3m65n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_smshv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oaorr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6y8ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hrld3")
+}],
+"loop": true,
+"name": &"atk_demode",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_3m65n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_74vap")
+}],
+"loop": true,
+"name": &"atk_stay",
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -122,7 +175,7 @@ position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
 animation = &"atk1_right"
-frame_progress = 0.405743
+frame_progress = 0.997841
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -130,7 +183,17 @@ position = Vector2(169, 246.5)
 shape = SubResource("RectangleShape2D_wpk7j")
 
 [node name="AttackTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 2.66
+one_shot = true
+
+[node name="ModeTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="DemodeTimer" type="Timer" parent="."]
+wait_time = 2.66
 one_shot = true
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="ModeTimer" to="." method="_on_mode_timer_timeout"]
+[connection signal="timeout" from="DemodeTimer" to="." method="_on_demode_timer_timeout"]

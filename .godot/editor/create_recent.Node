@@ -1,3 +1,4 @@
+Timer
 Control
 ScrollContainer
 Panel
@@ -9,6 +10,5 @@ Sprite2D
 TextureRect
 TextEdit
 Button
-Timer
 AudioStreamPlayer2D
 StaticBody2D
