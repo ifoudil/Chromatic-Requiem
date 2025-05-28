@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=69 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
 [ext_resource type="Texture2D" uid="uid://drf5m4uudo2pg" path="res://Assets/atkleft2.png" id="2_5p88r"]
@@ -36,7 +36,9 @@
 [ext_resource type="Texture2D" uid="uid://bqxa7yefwwnw5" path="res://Assets/reloRR.png" id="19_144cy"]
 [ext_resource type="Texture2D" uid="uid://d1ok3jgqli723" path="res://Assets/reloRR2.png" id="20_uulmi"]
 [ext_resource type="Texture2D" uid="uid://cnudx25fv0c15" path="res://Assets/transinn.png" id="23_0pfmo"]
+[ext_resource type="Texture2D" uid="uid://v2wphcubqt0o" path="res://Assets/relo_jump2.png" id="23_l6pc8"]
 [ext_resource type="Texture2D" uid="uid://1i6rcgo4nxhh" path="res://Assets/transinn2.png" id="24_1vvjq"]
+[ext_resource type="Texture2D" uid="uid://caqjhagapb8p1" path="res://Assets/relo_jump.png" id="25_401li"]
 [ext_resource type="Texture2D" uid="uid://bdhj1iyurgldf" path="res://Assets/transinn3.png" id="25_nv6mk"]
 [ext_resource type="Texture2D" uid="uid://f1oos0gf4xal" path="res://Assets/transinn4.png" id="26_po8hb"]
 [ext_resource type="Texture2D" uid="uid://bp74i7l3wp8d" path="res://Assets/transinn5.png" id="27_sy1rb"]
@@ -211,10 +213,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("23_l6pc8")
+}],
+"loop": true,
+"name": &"jump_left3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("8_rvhxl")
 }],
 "loop": true,
 "name": &"jump_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_401li")
+}],
+"loop": true,
+"name": &"jump_right3",
 "speed": 5.0
 }, {
 "frames": [{
@@ -397,12 +415,10 @@ script = ExtResource("1_b0c5b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(897.063, -122.12)
+position = Vector2(896.063, -122.12)
 scale = Vector2(1.89405, 1.90049)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"atk1_right"
-frame = 2
-frame_progress = 0.523487
+animation = &"jump_right3"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

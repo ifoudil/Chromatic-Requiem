@@ -22,13 +22,19 @@ func _on_microships_pressed() -> void:
 
 func _on_return_pressed() -> void:
 	$Control.visible = false
-	self.visible = false
 	$VBoxContainer.visible = true
 	$AnimatedSprite2D.play("default") 
 
 
 func _on_pink_pressed() -> void:
 	$AnimatedSprite2D.play("microship_pink") 
+	$VBoxContainer.visible = false
+	$Control/pink.visible = false
+	$Control/yellow.visible = false
+
+
+func _on_yellow_pressed() -> void:
+	$AnimatedSprite2D.play("microship_yellow") 
 	$VBoxContainer.visible = false
 	$Control/pink.visible = false
 	$Control/yellow.visible = false

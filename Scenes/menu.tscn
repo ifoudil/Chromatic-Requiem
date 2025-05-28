@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnpugvblpnqgf"]
+[gd_scene load_steps=7 format=3 uid="uid://bnpugvblpnqgf"]
 
 [ext_resource type="Script" uid="uid://d18hovlm31dt8" path="res://Scripts/menu.gd" id="1_1rerr"]
 [ext_resource type="Texture2D" uid="uid://62r1gt6wam3c" path="res://Assets/microships.png" id="2_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://c3mlyd171mlqh" path="res://Assets/info_.png" id="3_cayip"]
 [ext_resource type="Texture2D" uid="uid://bc7sdrbj00yfg" path="res://Assets/microship_pink.png" id="4_158mb"]
+[ext_resource type="Texture2D" uid="uid://2trvifksptap" path="res://Assets/info_ship_yellow.png" id="5_wwsa2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cayip"]
 animations = [{
@@ -30,6 +31,14 @@ animations = [{
 "loop": true,
 "name": &"microship_pink",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wwsa2")
+}],
+"loop": true,
+"name": &"microship_yellow",
+"speed": 5.0
 }]
 
 [node name="MenuUI" type="CanvasLayer"]
@@ -41,36 +50,44 @@ offset_bottom = 361.0
 color = Color(1, 1, 1, 0.329412)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(428, 186)
-scale = Vector2(0.964063, 1.10278)
+position = Vector2(429, 186)
+scale = Vector2(0.3, 0.314)
 sprite_frames = SubResource("SpriteFrames_cayip")
-animation = &"microship_pink"
+animation = &"info"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 288.0
-offset_top = 107.0
+[node name="VBoxContainer" type="Control" parent="."]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 298.0
+offset_top = 290.0
 offset_right = 415.0
-offset_bottom = 260.0
-theme_override_constants/separation = 30
-alignment = 1
+offset_bottom = 290.0
 
 [node name="microships" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "
-"
+offset_left = -3.0
+offset_top = -165.0
+offset_right = 127.0
+offset_bottom = -145.0
 flat = true
 
 [node name="info" type="Button" parent="VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-text = "
-"
+offset_left = -2.0
+offset_top = -114.0
+offset_right = 117.0
+offset_bottom = -98.0
 
 [node name="Quitter" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "
-"
+anchor_left = -0.161
+anchor_right = 2.356
+offset_left = 12.837
+offset_top = -66.0
+offset_right = -160.652
+offset_bottom = -50.0
 flat = true
 
 [node name="Control" type="Control" parent="."]
@@ -81,34 +98,31 @@ offset_bottom = 40.0
 
 [node name="return" type="Button" parent="Control"]
 layout_mode = 2
-offset_left = 472.0
-offset_top = 239.0
-offset_right = 570.0
-offset_bottom = 270.0
-text = "
-"
+offset_left = 484.0
+offset_top = 238.0
+offset_right = 562.0
+offset_bottom = 253.0
 flat = true
 
 [node name="pink" type="Button" parent="Control"]
 layout_mode = 2
-offset_left = 296.0
-offset_top = 140.0
-offset_right = 353.0
-offset_bottom = 171.0
-text = "
-"
+offset_left = 305.0
+offset_top = 148.0
+offset_right = 349.0
+offset_bottom = 162.0
 flat = true
 
 [node name="yellow" type="Button" parent="Control"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-offset_left = 300.0
-offset_top = 170.0
-offset_right = 390.0
-offset_bottom = 201.0
+offset_left = 307.0
+offset_top = 164.0
+offset_right = 376.0
+offset_bottom = 179.0
 
 [connection signal="pressed" from="VBoxContainer/microships" to="." method="_on_microships_pressed"]
 [connection signal="pressed" from="VBoxContainer/info" to="." method="_on_info_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
 [connection signal="pressed" from="Control/return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="Control/pink" to="." method="_on_pink_pressed"]
+[connection signal="pressed" from="Control/yellow" to="." method="_on_yellow_pressed"]

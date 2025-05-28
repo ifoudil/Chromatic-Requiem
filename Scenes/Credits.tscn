@@ -158,9 +158,10 @@ _data = {
 [node name="credit" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 1)
 texture_filter = 1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 640.0
+offset_bottom = 362.0
 texture = ExtResource("1_i8h6y")
+expand_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../credit")
