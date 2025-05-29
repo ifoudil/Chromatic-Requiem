@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxj74"]
-size = Vector2(640, 61)
+size = Vector2(640, 38)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(3, 64)
@@ -38,13 +38,18 @@ sprite_frames = SubResource("SpriteFrames_k1kij")
 [node name="Area2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(319, 260.5)
+position = Vector2(319, 272)
 shape = SubResource("RectangleShape2D_oxj74")
 
 [node name="characterBody2D" parent="." instance=ExtResource("2_yo6rb")]
+position = Vector2(142, -56)
 
-[node name="Camera2D" type="Camera2D" parent="characterBody2D"]
-position = Vector2(278, 153)
+[node name="Camera2D2" type="Camera2D" parent="characterBody2D"]
+position = Vector2(176, 206)
+limit_left = 0
+limit_top = 0
+limit_right = 1500
+limit_bottom = 1015
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.6

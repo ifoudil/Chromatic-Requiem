@@ -11,3 +11,4 @@ res://Scenes/menu.tscn
 res://Scenes/Credits.tscn
 res://Scenes/player.tscn
 res://Scripts/baddie_violet.gd
+res://Scripts/baddieYellow.gd
