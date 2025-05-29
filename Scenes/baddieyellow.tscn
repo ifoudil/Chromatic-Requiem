@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=73 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
 [ext_resource type="Texture2D" uid="uid://drf5m4uudo2pg" path="res://Assets/atkleft2.png" id="2_5p88r"]
@@ -27,8 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://m8md6fge8m0x" path="res://Assets/reloRL.png" id="15_dbx4j"]
 [ext_resource type="Texture2D" uid="uid://dlq5ib3lqnctf" path="res://Assets/atk_right333.png" id="15_j67vq"]
 [ext_resource type="Texture2D" uid="uid://cuc00pxf5jd37" path="res://Assets/reloRL2.png" id="16_55n0g"]
+[ext_resource type="Texture2D" uid="uid://boraec7xuls4j" path="res://Assets/ILYF.png" id="17_40kwv"]
 [ext_resource type="Texture2D" uid="uid://fkw8vtx5qap6" path="res://Assets/RRYF.png" id="17_cuugi"]
 [ext_resource type="Texture2D" uid="uid://cdjd2p3vseg5a" path="res://Assets/RRY.png" id="17_p8w0b"]
+[ext_resource type="Texture2D" uid="uid://bptsof4m3d4ih" path="res://Assets/ILYF2.png" id="18_b52n7"]
 [ext_resource type="Texture2D" uid="uid://dpvioa00jmmne" path="res://Assets/RRY2.png" id="18_eor87"]
 [ext_resource type="Texture2D" uid="uid://bb8bjx42hrr15" path="res://Assets/RRYF2.png" id="18_tqy3j"]
 [ext_resource type="Texture2D" uid="uid://bqxa7yefwwnw5" path="res://Assets/reloRR.png" id="19_144cy"]
@@ -161,10 +163,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_uulmi")
+"texture": ExtResource("17_40kwv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_e5twx")
+"texture": ExtResource("18_b52n7")
 }],
 "loop": true,
 "name": &"idle_left2",
@@ -436,7 +438,7 @@ texture_filter = 1
 position = Vector2(896.063, -122.12)
 scale = Vector2(1.89405, 1.90049)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"jump_left"
+animation = &"idle_left2"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
