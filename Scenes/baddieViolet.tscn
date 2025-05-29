@@ -176,7 +176,7 @@ position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
 animation = &"atk1_right"
-frame_progress = 0.230403
+frame_progress = 0.759049
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

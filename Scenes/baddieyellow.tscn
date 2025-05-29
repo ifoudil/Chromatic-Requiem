@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://dc2uygkwfcu8w"]
+[gd_scene load_steps=71 format=3 uid="uid://dc2uygkwfcu8w"]
 
 [ext_resource type="Script" uid="uid://coxexhi2gki7i" path="res://Scripts/baddieYellow.gd" id="1_b0c5b"]
 [ext_resource type="Texture2D" uid="uid://drf5m4uudo2pg" path="res://Assets/atkleft2.png" id="2_5p88r"]
@@ -14,11 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://lwfxg530t7ui" path="res://Assets/IRYF2.png" id="6_e5twx"]
 [ext_resource type="Texture2D" uid="uid://77yv71eb6xo4" path="res://Assets/atkY3.png" id="6_rt5qn"]
 [ext_resource type="Texture2D" uid="uid://ubmkfv4c8p3k" path="res://Assets/idleLeft.png" id="7_1vvjq"]
-[ext_resource type="Texture2D" uid="uid://33v312kgomtn" path="res://Assets/perso_final copie 2.png" id="7_7kl0n"]
 [ext_resource type="Texture2D" uid="uid://h5favmv3v7en" path="res://Assets/atkY4.png" id="7_ov87t"]
 [ext_resource type="Texture2D" uid="uid://bv1qy2v382wd6" path="res://Assets/idle-r.png" id="7_p42id"]
 [ext_resource type="Texture2D" uid="uid://danpw2awpj0k0" path="res://Assets/atkY5.png" id="8_rt5qn"]
-[ext_resource type="Texture2D" uid="uid://cw5w3m5yxvgyl" path="res://Assets/perso_final.png" id="8_rvhxl"]
 [ext_resource type="Texture2D" uid="uid://dgui3uyoynjvx" path="res://Assets/reloIR.png" id="8_tqy3j"]
 [ext_resource type="Texture2D" uid="uid://lna5mwlbq73n" path="res://Assets/RLY.png" id="11_dqocq"]
 [ext_resource type="Texture2D" uid="uid://bewg40s6c2wsl" path="res://Assets/RLY2.png" id="12_dkgix"]
@@ -35,12 +33,16 @@
 [ext_resource type="Texture2D" uid="uid://bb8bjx42hrr15" path="res://Assets/RRYF2.png" id="18_tqy3j"]
 [ext_resource type="Texture2D" uid="uid://bqxa7yefwwnw5" path="res://Assets/reloRR.png" id="19_144cy"]
 [ext_resource type="Texture2D" uid="uid://d1ok3jgqli723" path="res://Assets/reloRR2.png" id="20_uulmi"]
+[ext_resource type="Texture2D" uid="uid://bgi2kxcswhmtt" path="res://Assets/jumpidleL.png" id="22_l6pc8"]
 [ext_resource type="Texture2D" uid="uid://cnudx25fv0c15" path="res://Assets/transinn.png" id="23_0pfmo"]
+[ext_resource type="Texture2D" uid="uid://4gi8b43w0afw" path="res://Assets/jump_form1.png" id="23_elwyy"]
 [ext_resource type="Texture2D" uid="uid://v2wphcubqt0o" path="res://Assets/relo_jump2.png" id="23_l6pc8"]
 [ext_resource type="Texture2D" uid="uid://1i6rcgo4nxhh" path="res://Assets/transinn2.png" id="24_1vvjq"]
+[ext_resource type="Texture2D" uid="uid://c81hb2kdavwpg" path="res://Assets/jumpidleR.png" id="24_401li"]
 [ext_resource type="Texture2D" uid="uid://caqjhagapb8p1" path="res://Assets/relo_jump.png" id="25_401li"]
 [ext_resource type="Texture2D" uid="uid://bdhj1iyurgldf" path="res://Assets/transinn3.png" id="25_nv6mk"]
 [ext_resource type="Texture2D" uid="uid://f1oos0gf4xal" path="res://Assets/transinn4.png" id="26_po8hb"]
+[ext_resource type="Texture2D" uid="uid://b52gve4muwwsj" path="res://Assets/jump_form2.png" id="26_r0kim"]
 [ext_resource type="Texture2D" uid="uid://bp74i7l3wp8d" path="res://Assets/transinn5.png" id="27_sy1rb"]
 [ext_resource type="Texture2D" uid="uid://dt01r5h4e4j3t" path="res://Assets/transinn6.png" id="28_k8nak"]
 [ext_resource type="Texture2D" uid="uid://ckt3mme6phs4k" path="res://Assets/Transform4.png" id="29_0pfmo"]
@@ -205,10 +207,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_7kl0n")
+"texture": ExtResource("23_elwyy")
 }],
 "loop": true,
 "name": &"jump_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_l6pc8")
+}],
+"loop": true,
+"name": &"jump_left2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -221,10 +231,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_rvhxl")
+"texture": ExtResource("24_401li")
 }],
 "loop": true,
 "name": &"jump_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_r0kim")
+}],
+"loop": true,
+"name": &"jump_right2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -418,7 +436,7 @@ texture_filter = 1
 position = Vector2(896.063, -122.12)
 scale = Vector2(1.89405, 1.90049)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"jump_right3"
+animation = &"jump_left"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
