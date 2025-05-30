@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://gxmrwxxp2xch"]
+[gd_scene load_steps=8 format=3 uid="uid://gxmrwxxp2xch"]
 
 [ext_resource type="Texture2D" uid="uid://cbe8ipr8co47j" path="res://Assets/lvl1.png" id="1_k1kij"]
 [ext_resource type="PackedScene" uid="uid://dc2uygkwfcu8w" path="res://Scenes/baddieyellow.tscn" id="2_ilbed"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="3_k1kij"]
+[ext_resource type="PackedScene" uid="uid://b0s70kcvun8us" path="res://Scenes/area_2d.tscn" id="4_oxj74"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
 size = Vector2(1533.5, 285)
@@ -67,5 +68,8 @@ offset_top = -56.0
 offset_right = 507.0
 offset_bottom = -2.0
 text = "press N to start transform  "
+
+[node name="Area2D4" parent="." instance=ExtResource("4_oxj74")]
+position = Vector2(3, 7)
 
 [node name="pause" parent="." instance=ExtResource("3_k1kij")]

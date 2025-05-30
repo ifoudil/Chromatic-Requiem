@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0s70kcvun8us"]
+
+[ext_resource type="Texture2D" uid="uid://sf14baukfjti" path="res://Assets/plateforme.png" id="1_81842"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jb3vm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_81842")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w4em"]
+size = Vector2(381.515, 14.6506)
+
+[node name="Area2D" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(335, 254)
+scale = Vector2(5.27344, 2.3125)
+sprite_frames = SubResource("SpriteFrames_jb3vm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(336, 227)
+scale = Vector2(1.60938, 1.29688)
+shape = SubResource("RectangleShape2D_3w4em")
