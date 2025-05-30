@@ -7,6 +7,7 @@ func _ready():
 func _on_quitter_pressed() -> void:
 	$AnimatedSprite2D.play("default") 
 	self.visible = false
+	get_tree().paused = false
 
 func _on_info_pressed() -> void:
 	$AnimatedSprite2D.play("histoire")

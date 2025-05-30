@@ -9,7 +9,8 @@ func _ready():
 func _on_pause_pressed() -> void:
 	if menu.get_parent() == null:
 		# Ouvrir le menu pause
-		add_child(menu)  # On ajoute le menu à CanvasLayer → il apparaît + interactif
+		add_child(menu) 
+	 # On ajoute le menu à CanvasLayer → il apparaît + interactif
 		
 		# FREEZER TOUT LE JEU
 		get_tree().paused = true

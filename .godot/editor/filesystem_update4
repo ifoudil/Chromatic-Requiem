@@ -14,3 +14,5 @@ res://Scripts/baddie_violet.gd
 res://Scripts/baddieYellow.gd
 res://Scripts/menu.gd
 res://Scenes/area_2d.tscn
+res://Scripts/area_2d.gd
+res://Scripts/pause.gd

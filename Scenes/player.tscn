@@ -182,4 +182,5 @@ one_shot = true
 
 [node name="pause" parent="." instance=ExtResource("15_h4iuc")]
 
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
 [connection signal="timeout" from="CharacterBody2D/AttackTimer" to="CharacterBody2D" method="_on_attack_timer_timeout"]
