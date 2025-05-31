@@ -16,3 +16,5 @@ res://Scripts/menu.gd
 res://Scenes/area_2d.tscn
 res://Scripts/area_2d.gd
 res://Scripts/pause.gd
+res://Scenes/trampo.tscn
+res://Scripts/trampo.gd

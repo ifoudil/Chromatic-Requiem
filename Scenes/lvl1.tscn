@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://gxmrwxxp2xch"]
+[gd_scene load_steps=9 format=3 uid="uid://gxmrwxxp2xch"]
 
 [ext_resource type="Texture2D" uid="uid://cbe8ipr8co47j" path="res://Assets/lvl1.png" id="1_k1kij"]
 [ext_resource type="PackedScene" uid="uid://dc2uygkwfcu8w" path="res://Scenes/baddieyellow.tscn" id="2_ilbed"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="3_k1kij"]
 [ext_resource type="PackedScene" uid="uid://b0s70kcvun8us" path="res://Scenes/area_2d.tscn" id="4_oxj74"]
+[ext_resource type="PackedScene" uid="uid://dg8j8ccc3fnnn" path="res://Scenes/trampo.tscn" id="5_gw65t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
 size = Vector2(1533.5, 285)
@@ -31,6 +32,9 @@ texture = ExtResource("1_k1kij")
 position = Vector2(447.25, 785)
 shape = SubResource("RectangleShape2D_gw65t")
 
+[node name="trampo" parent="Area2D2" instance=ExtResource("5_gw65t")]
+position = Vector2(46, -333)
+
 [node name="Area2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
@@ -42,7 +46,7 @@ position = Vector2(-17.5, 426)
 shape = SubResource("RectangleShape2D_k1kij")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(319, 260.5)
+position = Vector2(402, 337)
 shape = SubResource("RectangleShape2D_oxj74")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ilbed")]
@@ -70,6 +74,6 @@ offset_bottom = -2.0
 text = "press N to start transform  "
 
 [node name="Area2D4" parent="." instance=ExtResource("4_oxj74")]
-position = Vector2(3, 7)
+position = Vector2(102, -1)
 
 [node name="pause" parent="." instance=ExtResource("3_k1kij")]

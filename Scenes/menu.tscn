@@ -65,7 +65,7 @@ position = Vector2(429, 186.37)
 scale = Vector2(0.3, 0.318111)
 sprite_frames = SubResource("SpriteFrames_cayip")
 animation = &"microship_yellow"
-frame_progress = 0.32598
+frame_progress = 0.0674186
 
 [node name="VBoxContainer" type="Control" parent="."]
 layout_direction = 1
