@@ -8,3 +8,6 @@ res://Scenes/Credits.tscn
 res://Scenes/player.tscn
 res://Scenes/area_2d.tscn
 res://Scenes/trampo.tscn
+res://Scenes/intro.tscn
+res://Scripts/intro.gd
+res://Scripts/animation_player.gd

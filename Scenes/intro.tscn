@@ -1,0 +1,142 @@
+[gd_scene load_steps=20 format=3 uid="uid://fg5irxiamjq1"]
+
+[ext_resource type="Script" uid="uid://chlxgd6on4uc8" path="res://Scripts/intro.gd" id="1_b226h"]
+[ext_resource type="Texture2D" uid="uid://dsd6adj03k2xp" path="res://Assets/intro1.png" id="2_rsiac"]
+[ext_resource type="Texture2D" uid="uid://xrhmqyvew73t" path="res://Assets/intro2.png" id="3_3bmuq"]
+[ext_resource type="Texture2D" uid="uid://ccq8cqnk2170b" path="res://Assets/intro3.png" id="4_nn7w8"]
+[ext_resource type="Texture2D" uid="uid://caodqp3apy1l1" path="res://Assets/intro4.png" id="5_b26wi"]
+[ext_resource type="Texture2D" uid="uid://d3dsp4k6spelp" path="res://Assets/intro5.png" id="6_ewknp"]
+[ext_resource type="Texture2D" uid="uid://bmbwqoktyrknv" path="res://Assets/intro6.png" id="7_iab25"]
+[ext_resource type="Texture2D" uid="uid://bpi0qefxwc4s5" path="res://Assets/intro7.png" id="8_b6uv1"]
+[ext_resource type="Texture2D" uid="uid://bolj4db3f3i6i" path="res://Assets/intro8.png" id="9_et3xt"]
+[ext_resource type="Texture2D" uid="uid://csbe24c8j7las" path="res://Assets/intro9.png" id="10_jfi4t"]
+[ext_resource type="Texture2D" uid="uid://d3gf3io03g60a" path="res://Assets/intro10.png" id="11_odey0"]
+[ext_resource type="Texture2D" uid="uid://bfnro2fuavbsa" path="res://Assets/intro11.png" id="12_yny27"]
+[ext_resource type="Texture2D" uid="uid://bdlwmiaykf7jm" path="res://Assets/intro12.png" id="13_3pufg"]
+[ext_resource type="Texture2D" uid="uid://boiuh5wqa3lh0" path="res://Assets/intro13.png" id="14_kddu7"]
+[ext_resource type="Texture2D" uid="uid://d4hpffgbdohxm" path="res://Assets/intro14.png" id="15_2n2py"]
+[ext_resource type="Texture2D" uid="uid://chp28af613vyh" path="res://Assets/intro15.png" id="16_uqcso"]
+[ext_resource type="AudioStream" uid="uid://7oodixg0xph1" path="res://SFX/mixkit-facility-alarm-sound-999.wav" id="17_b6uv1"]
+[ext_resource type="AudioStream" uid="uid://bea6rjymbr86i" path="res://SFX/bubbles-171716.mp3" id="17_et3xt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b226h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ewknp")
+}],
+"loop": true,
+"name": &"black",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rsiac")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rsiac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3bmuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nn7w8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b26wi")
+}],
+"loop": true,
+"name": &"greenoff",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_iab25")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_yny27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3pufg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kddu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2n2py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uqcso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_odey0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_odey0")
+}],
+"loop": true,
+"name": &"redalarm",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_b6uv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b6uv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b6uv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_et3xt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_et3xt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jfi4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jfi4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_odey0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_odey0")
+}],
+"loop": true,
+"name": &"redon",
+"speed": 3.0
+}]
+
+[node name="intro" type="Node2D"]
+script = ExtResource("1_b226h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(320.5, 180)
+scale = Vector2(1.00156, 1)
+sprite_frames = SubResource("SpriteFrames_b226h")
+animation = &"redalarm"
+frame_progress = 0.211363
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(641.501, 360)
+scale = Vector2(1.00313, 1)
+stream = ExtResource("17_et3xt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(320.5, 180)
+scale = Vector2(1.00156, 1)
+stream = ExtResource("17_b6uv1")
