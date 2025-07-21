@@ -8,7 +8,7 @@ func _ready():
 	sprite.play("green")
 	await get_tree().create_timer(1.5).timeout
 	sprite.play("greenoff")
-	await get_tree().create_timer(0.8).timeout
+	await get_tree().create_timer(0.7).timeout
 	sprite.play("black")
 	await get_tree().create_timer(3).timeout
 	sprite.play("red")
