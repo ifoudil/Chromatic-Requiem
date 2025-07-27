@@ -1,6 +1,6 @@
-AudioStreamPlayer2D
-Node2D
 AnimatedSprite2D
+Node2D
+AudioStreamPlayer2D
 Node
 PinJoint2D
 AnimationPlayer
@@ -12,4 +12,3 @@ CollisionShape2D
 AudioStreamPlayer
 Timer
 Control
-ScrollContainer

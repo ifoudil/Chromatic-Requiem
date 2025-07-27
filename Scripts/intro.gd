@@ -22,4 +22,11 @@ func _ready():
 	await get_tree().create_timer(8).timeout
 	alarm.stop()
 	bubble.stop()
-	get_tree().change_scene_to_file("res://Scenes/player.tscn")
+	sprite.play("black")
+	await get_tree().create_timer(2).timeout
+	sprite.play("skip1")
+	await get_tree().create_timer(0.5).timeout
+	sprite.play("skip2")
+	await get_tree().create_timer(2.49).timeout
+	sprite.play("skip3")
+	await get_tree().create_timer(0.5).timeout
