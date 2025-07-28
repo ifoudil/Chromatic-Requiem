@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4vwelxgqjxuj"]
 
-[ext_resource type="Script" uid="uid://d22c4qrkj8mus" path="res://Scripts/menu_2.gd" id="1_tswe5"]
-[ext_resource type="Texture2D" uid="uid://2vnylootl6p1" path="res://Assets/map.png" id="2_fowjw"]
-[ext_resource type="Texture2D" uid="uid://bdfargst4qg1y" path="res://Assets/carte.png" id="3_tmtf3"]
+[ext_resource type="Script" path="res://Scripts/menu_2.gd" id="1_tswe5"]
+[ext_resource type="Texture2D" uid="uid://x6ok1vcy86cs" path="res://Assets/map.png" id="2_fowjw"]
+[ext_resource type="Texture2D" uid="uid://gg6q0mustuj5" path="res://Assets/carte.png" id="3_tmtf3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tmtf3"]
 animations = [{

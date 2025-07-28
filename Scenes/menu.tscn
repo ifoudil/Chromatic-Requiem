@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bnpugvblpnqgf"]
 
-[ext_resource type="Script" uid="uid://d18hovlm31dt8" path="res://Scripts/menu.gd" id="1_1rerr"]
-[ext_resource type="Texture2D" uid="uid://bdyu1f8g5j4y6" path="res://Assets/microships.png" id="2_xhh6f"]
-[ext_resource type="Texture2D" uid="uid://c3mlyd171mlqh" path="res://Assets/info_.png" id="3_cayip"]
-[ext_resource type="Texture2D" uid="uid://cpc41i1yjynqi" path="res://Assets/histoire.png" id="3_jsrd8"]
-[ext_resource type="Texture2D" uid="uid://b806jlbbj0mkf" path="res://Assets/microship_pink.png" id="4_158mb"]
-[ext_resource type="Texture2D" uid="uid://2trvifksptap" path="res://Assets/info_ship_yellow.png" id="5_wwsa2"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_1rerr"]
+[ext_resource type="Texture2D" uid="uid://ba8ijtcugouqp" path="res://Assets/microships.png" id="2_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://ceiscaedwriei" path="res://Assets/info_.png" id="3_cayip"]
+[ext_resource type="Texture2D" uid="uid://cet7b4pppwsp5" path="res://Assets/histoire.png" id="3_jsrd8"]
+[ext_resource type="Texture2D" uid="uid://dvha2tbuutqqd" path="res://Assets/microship_pink.png" id="4_158mb"]
+[ext_resource type="Texture2D" uid="uid://bhe236ede8nk0" path="res://Assets/info_ship_yellow.png" id="5_wwsa2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cayip"]
 animations = [{

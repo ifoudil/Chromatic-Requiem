@@ -1,9 +1,9 @@
 [gd_scene load_steps=24 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://db6686aeeqaf3" path="res://Assets/New Piskel (11).png" id="1_pu2lt"]
-[ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_vgqql"]
-[ext_resource type="Script" uid="uid://dvm8286ydnq1h" path="res://Scripts/area_2d.gd" id="2_ukyrk"]
-[ext_resource type="Script" uid="uid://cbbr5680mc0h6" path="res://Scripts/area_2d_2.gd" id="3_7dp3o"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_vgqql"]
+[ext_resource type="Script" path="res://Scripts/area_2d.gd" id="2_ukyrk"]
+[ext_resource type="Script" path="res://Scripts/area_2d_2.gd" id="3_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="3_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://b4n37wvhjhguh" path="res://Assets/perso_final copie.png" id="3_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="4_ukyrk"]
