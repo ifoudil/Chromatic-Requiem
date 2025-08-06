@@ -1,14 +1,12 @@
-res://Scenes/monster.tscn
-res://Scenes/lvl1.tscn
-res://Scenes/trampo.tscn
 res://Scenes/pause.tscn
+res://Scenes/lvl1.tscn
 res://Scenes/lvl2.tscn
 res://Scenes/menu.tscn
 res://Scenes/player.tscn
-res://Scenes/area_2d.tscn
 res://Scenes/Baddie.tscn
 res://Scenes/menu_2.tscn
-res://Scripts/monster.gd
+res://Scenes/monster.tscn
 res://Scenes/baddieViolet.tscn
 res://Scenes/baddieyellow.tscn
 res://Scenes/projectile.tscn
+res://Scripts/monster.gd

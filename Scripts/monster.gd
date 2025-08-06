@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 100 
+const SPEED = 100
 
 @onready var anim_sprite = $AnimatedSprite2D
 @onready var hitbox = $Hitbox
@@ -15,5 +15,6 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_hitbox_area_entered(area):
-	if area.name == "Projectile":
+	if area.is_in_group("projectile"):
+		print("Le monstre a été touché par :", area.name)
 		queue_free()
