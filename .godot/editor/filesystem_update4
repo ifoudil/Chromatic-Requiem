@@ -11,3 +11,6 @@ res://Scenes/trampo.tscn
 res://Scenes/intro.tscn
 res://Scripts/intro.gd
 res://Scripts/animation_player.gd
+res://Scripts/baddieYellow.gd
+res://scripts/drip.gd
+res://Scenes/drip.tscn
