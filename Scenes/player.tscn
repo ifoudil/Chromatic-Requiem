@@ -124,6 +124,7 @@ size = Vector2(57, 95)
 position = Vector2(-285, -149)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+texture_filter = 1
 position = Vector2(606.469, 329.836)
 scale = Vector2(0.99541, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")

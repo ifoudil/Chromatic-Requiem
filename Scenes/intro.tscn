@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://fg5irxiamjq1"]
+[gd_scene load_steps=39 format=3 uid="uid://fg5irxiamjq1"]
 
 [ext_resource type="Script" uid="uid://chlxgd6on4uc8" path="res://Scripts/intro.gd" id="1_b226h"]
 [ext_resource type="Texture2D" uid="uid://dsd6adj03k2xp" path="res://Assets/intro1.png" id="2_rsiac"]
@@ -137,7 +137,10 @@ animations = [{
 "loop": true,
 "name": &"redon",
 "speed": 3.0
-}, {
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xoeko"]
+animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("20_xoeko")
@@ -216,8 +219,8 @@ texture_filter = 1
 position = Vector2(320.5, 180)
 scale = Vector2(1.00156, 1)
 sprite_frames = SubResource("SpriteFrames_b226h")
-animation = &"skip2"
-frame_progress = 0.0938838
+animation = &"black"
+frame_progress = 0.153065
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(641.501, 360)
@@ -228,3 +231,10 @@ stream = ExtResource("17_et3xt")
 position = Vector2(320.5, 180)
 scale = Vector2(1.00156, 1)
 stream = ExtResource("17_b6uv1")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(320.5, 180)
+scale = Vector2(1.00156, 1.09091)
+sprite_frames = SubResource("SpriteFrames_xoeko")
+animation = &"skip3"

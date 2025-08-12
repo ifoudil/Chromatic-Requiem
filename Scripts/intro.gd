@@ -1,10 +1,12 @@
 extends Node2D
 
 @onready var sprite = $AnimatedSprite2D
+@onready var sprite2 = $AnimatedSprite2D2
 @onready var alarm = $AudioStreamPlayer2D
 @onready var bubble = $AudioStreamPlayer2D2
 
 func _ready():
+	sprite2.visible = false
 	sprite.play("green")
 	await get_tree().create_timer(1.5).timeout
 	sprite.play("greenoff")
@@ -24,9 +26,13 @@ func _ready():
 	bubble.stop()
 	sprite.play("black")
 	await get_tree().create_timer(2).timeout
-	sprite.play("skip1")
+	
+	sprite2.visible = true
+	sprite2.play("skip1")
 	await get_tree().create_timer(0.5).timeout
-	sprite.play("skip2")
+	sprite2.play("skip2")
 	await get_tree().create_timer(2.49).timeout
-	sprite.play("skip3")
-	await get_tree().create_timer(0.5).timeout
+	sprite2.play("skip3")
+	await get_tree().create_timer(5).timeout
+	
+	get_tree().change_scene_to_file("res://Scenes/player.tscn")
