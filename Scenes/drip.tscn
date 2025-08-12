@@ -1,17 +1,47 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8nitoc645kcs"]
+[gd_scene load_steps=18 format=3 uid="uid://c8nitoc645kcs"]
 
 [ext_resource type="Script" uid="uid://bo6upbbe1nw1d" path="res://scripts/drip.gd" id="1_a4haw"]
 [ext_resource type="Texture2D" uid="uid://88hv2htqkxvu" path="res://Assets/drip1.png" id="2_7aswd"]
+[ext_resource type="Texture2D" uid="uid://6hceu2wgeypj" path="res://Assets/continue3.png" id="2_tp5ut"]
+[ext_resource type="Texture2D" uid="uid://0lhknoonwwbw" path="res://Assets/continue4.png" id="3_4sagc"]
 [ext_resource type="Texture2D" uid="uid://c8rxnd5rlruft" path="res://Assets/drip2.png" id="3_k45p5"]
+[ext_resource type="Texture2D" uid="uid://dt7bwl0mcm3ok" path="res://Assets/continue5.png" id="4_j8oo4"]
 [ext_resource type="Texture2D" uid="uid://cnimous466qwg" path="res://Assets/drip3.png" id="4_u7koi"]
+[ext_resource type="Texture2D" uid="uid://daxtxhegdli2y" path="res://Assets/continue6.png" id="5_am5sp"]
 [ext_resource type="Texture2D" uid="uid://dyfylknylndmm" path="res://Assets/drip4.png" id="5_t44f3"]
+[ext_resource type="Texture2D" uid="uid://bph4llrkwl4b3" path="res://Assets/continue7.png" id="6_bqg4a"]
 [ext_resource type="Texture2D" uid="uid://cgj8rxf1diph8" path="res://Assets/drip5.png" id="6_le7v4"]
 [ext_resource type="Texture2D" uid="uid://tyojwxnew6yi" path="res://Assets/drip6.png" id="7_738gv"]
+[ext_resource type="Texture2D" uid="uid://cl3hvf0sdia12" path="res://Assets/continue1.png" id="7_n0ca1"]
 [ext_resource type="Texture2D" uid="uid://55opu2kxcahf" path="res://Assets/drip7.png" id="8_tp5ut"]
 [ext_resource type="Texture2D" uid="uid://57m54t2a8opi" path="res://Assets/drip8.png" id="9_4sagc"]
+[ext_resource type="Texture2D" uid="uid://bcm3bjds4uqkf" path="res://Assets/continue2.png" id="10_cujv8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j8oo4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tp5ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4sagc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j8oo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_am5sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bqg4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n0ca1")
+}],
+"loop": true,
+"name": &"continue",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_7aswd")
@@ -21,6 +51,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_n0ca1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cujv8")
+}],
+"loop": true,
+"name": &"default2",
 "speed": 1.0
 }, {
 "frames": [{
@@ -35,9 +76,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_738gv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_tp5ut")
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_tp5ut")
@@ -62,4 +100,4 @@ position = Vector2(320, 180)
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_j8oo4")
 animation = &"drip"
-frame_progress = 0.935274
+frame_progress = 0.263314
