@@ -16,3 +16,6 @@ res://scripts/drip.gd
 res://Scenes/drip.tscn
 res://Scenes/menu_2.tscn
 res://Scripts/menu_2.gd
+res://Scenes/rock.tscn
+res://Scenes/fleche.tscn
+res://Scenes/Baddie.tscn
