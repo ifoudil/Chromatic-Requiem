@@ -1,3 +1,4 @@
+AnimationPlayer
 Button
 Area2D
 AnimatedSprite2D
@@ -5,7 +6,6 @@ Node2D
 AudioStreamPlayer2D
 Node
 PinJoint2D
-AnimationPlayer
 TextureRect
 CanvasLayer
 StaticBody2D

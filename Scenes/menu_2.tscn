@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b4vwelxgqjxuj"]
+[gd_scene load_steps=17 format=3 uid="uid://b4vwelxgqjxuj"]
 
 [ext_resource type="Script" uid="uid://d22c4qrkj8mus" path="res://Scripts/menu_2.gd" id="1_tswe5"]
 [ext_resource type="Texture2D" uid="uid://bnj5eul128if0" path="res://Assets/menuu.png" id="2_fowjw"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://8mj8udcjhdy7" path="res://Assets/clickup1.png" id="10_06vqn"]
 [ext_resource type="Texture2D" uid="uid://bhbgsijinl1p4" path="res://Assets/clickup2.png" id="11_3l1j6"]
 [ext_resource type="Texture2D" uid="uid://b1l6k0p5e0g3j" path="res://Assets/clickup3.png" id="12_6umdb"]
+[ext_resource type="Texture2D" uid="uid://c18br8wugj8sd" path="res://Assets/lvl2map.png" id="13_6umdb"]
+[ext_resource type="Texture2D" uid="uid://cepgqwujvfngx" path="res://Assets/lvl2map2.png" id="14_shx1t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tmtf3"]
 animations = [{
@@ -67,10 +69,39 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
 }],
 "loop": true,
 "name": &"lvl1up",
-"speed": 6.0
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_shx1t")
+}],
+"loop": true,
+"name": &"lvl2",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -90,7 +121,7 @@ anchors_preset = -1
 anchor_right = 0.997
 anchor_bottom = 1.0
 offset_right = 1.92004
-color = Color(1, 1, 1, 0.505882)
+color = Color(0.181798, 0.181798, 0.181798, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
@@ -98,8 +129,8 @@ texture_filter = 1
 position = Vector2(334, 180)
 scale = Vector2(0.997656, 1.00139)
 sprite_frames = SubResource("SpriteFrames_tmtf3")
-animation = &"lvl1up"
-frame_progress = 0.126801
+animation = &"lvl2"
+frame_progress = 0.374784
 
 [node name="Quitter" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -157,4 +188,6 @@ offset_bottom = 129.0
 [connection signal="mouse_entered" from="lvl1" to="." method="_on_lvl_1_mouse_entered"]
 [connection signal="mouse_exited" from="lvl1" to="." method="_on_lvl_1_mouse_exited"]
 [connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="mouse_entered" from="lvl2" to="." method="_on_lvl_2_mouse_entered"]
+[connection signal="mouse_exited" from="lvl2" to="." method="_on_lvl_2_mouse_exited"]
 [connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]

@@ -182,7 +182,7 @@ stream = ExtResource("5_f64u0")
 volume_db = 9.75
 
 [node name="splashScreen" type="TextureRect" parent="."]
-modulate = Color(1, 0.615385, 0.615385, 1)
+modulate = Color(1, 1, 1, 0)
 offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("3_7xmno")
