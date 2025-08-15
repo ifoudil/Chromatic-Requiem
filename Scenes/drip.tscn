@@ -75,7 +75,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default2",
-"speed": 1.0
+"speed": 1.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -147,7 +147,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"flash2",
-"speed": 1.0
+"speed": 1.5
 }]
 
 [node name="Node2D" type="Node2D"]
@@ -158,8 +158,8 @@ texture_filter = 1
 position = Vector2(320, 180)
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_j8oo4")
-animation = &"flash"
-frame_progress = 0.469316
+animation = &"default2"
+frame_progress = 0.400359
 
 [node name="continuer" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
