@@ -35,4 +35,4 @@ func _ready():
 	sprite2.play("skip3")
 	await get_tree().create_timer(5).timeout
 	
-	get_tree().change_scene_to_file("res://Scenes/player.tscn")
+	get_tree().change_scene_to_file("res://Scenes/lvl1.tscn")

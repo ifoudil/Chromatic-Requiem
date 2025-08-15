@@ -34,28 +34,6 @@ anchor_bottom = 1.0
 offset_right = 1.92004
 color = Color(1, 1, 1, 0.505882)
 
-[node name="lvl2" type="Button" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 216.0
-offset_top = 104.0
-offset_right = -399.0
-offset_bottom = -231.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="lvl1" type="Button" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 282.0
-offset_top = 61.0
-offset_right = -333.0
-offset_bottom = -274.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 texture_filter = 1
@@ -92,9 +70,28 @@ offset_bottom = 208.0
 text = "arcade"
 flat = true
 
-[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
-[connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
+[node name="lvl1" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 282.0
+offset_top = 61.0
+offset_right = -333.0
+offset_bottom = -274.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="lvl2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 216.0
+offset_top = 104.0
+offset_right = 241.0
+offset_bottom = 129.0
+
 [connection signal="pressed" from="Quitter" to="." method="_on_quitter_pressed"]
 [connection signal="pressed" from="map" to="." method="_on_map_pressed"]
 [connection signal="pressed" from="arcade" to="." method="_on_map_pressed"]
 [connection signal="pressed" from="arcade" to="." method="_on_arcade_pressed"]
+[connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]

@@ -19,3 +19,6 @@ res://Scripts/menu_2.gd
 res://Scenes/rock.tscn
 res://Scenes/fleche.tscn
 res://Scenes/Baddie.tscn
+res://scripts/lvl_1.gd
+res://Scripts/trampo.gd
+res://scripts/area_2d_3.gd

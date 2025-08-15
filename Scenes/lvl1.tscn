@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://gxmrwxxp2xch"]
+[gd_scene load_steps=11 format=3 uid="uid://gxmrwxxp2xch"]
 
 [ext_resource type="Texture2D" uid="uid://cbe8ipr8co47j" path="res://Assets/lvl1.png" id="1_k1kij"]
 [ext_resource type="PackedScene" uid="uid://dc2uygkwfcu8w" path="res://Scenes/baddieyellow.tscn" id="2_ilbed"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="3_k1kij"]
 [ext_resource type="PackedScene" uid="uid://b0s70kcvun8us" path="res://Scenes/area_2d.tscn" id="4_oxj74"]
 [ext_resource type="PackedScene" uid="uid://dg8j8ccc3fnnn" path="res://Scenes/trampo.tscn" id="5_gw65t"]
+[ext_resource type="Script" uid="uid://b2ypw3xahafx2" path="res://scripts/area_2d_3.gd" id="7_4bcgh"]
+[ext_resource type="Texture2D" uid="uid://bb8bjx42hrr15" path="res://Assets/RRYF2.png" id="7_4g8w4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
 size = Vector2(1533.5, 285)
@@ -13,9 +15,9 @@ size = Vector2(1533.5, 285)
 size = Vector2(31, 982)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxj74"]
-size = Vector2(640, 61)
+size = Vector2(608, 61)
 
-[node name="Node2D" type="Node2D"]
+[node name="lvl1" type="Node2D"]
 position = Vector2(3, 64)
 
 [node name="Area2D2" type="StaticBody2D" parent="."]
@@ -77,3 +79,19 @@ text = "press N to start transform  "
 position = Vector2(102, -1)
 
 [node name="pause" parent="." instance=ExtResource("3_k1kij")]
+
+[node name="Rryf2" type="Sprite2D" parent="."]
+position = Vector2(1127, 689)
+scale = Vector2(5.1875, 11.0312)
+texture = ExtResource("7_4g8w4")
+
+[node name="Area2D3" type="Area2D" parent="Rryf2"]
+position = Vector2(2.12045, 17.5864)
+scale = Vector2(0.192771, 0.0906516)
+script = ExtResource("7_4bcgh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Rryf2/Area2D3"]
+position = Vector2(-4, 4)
+shape = SubResource("RectangleShape2D_oxj74")
+
+[connection signal="body_entered" from="Rryf2/Area2D3" to="Rryf2/Area2D3" method="_on_body_entered"]

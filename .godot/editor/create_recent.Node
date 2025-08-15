@@ -1,3 +1,5 @@
+Button
+Area2D
 AnimatedSprite2D
 Node2D
 AudioStreamPlayer2D
@@ -6,9 +8,7 @@ PinJoint2D
 AnimationPlayer
 TextureRect
 CanvasLayer
-Area2D
 StaticBody2D
 CollisionShape2D
 AudioStreamPlayer
 Timer
-Control

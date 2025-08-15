@@ -74,3 +74,7 @@ func _play_bounce_sound():
 	var audio_player = get_node_or_null("AudioStreamPlayer2D")
 	if audio_player and audio_player.stream:
 		audio_player.play()
+
+
+func _on_area_2d_3_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
