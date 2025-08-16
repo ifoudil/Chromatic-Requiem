@@ -23,17 +23,20 @@ func _on_quitter_pressed() -> void:
 	self.visible = false
 	get_tree().paused = false
 
-
 func _on_quitter_mouse_entered() -> void:
-	if  $arcade.visible:
+	if is_animating:  # Bloquer si animation en cours
+		return
+	if $arcade.visible:
 		$AnimatedSprite2D.play("holdquit") 
-	if  $lvl2.visible:
+	if $lvl2.visible:
 		$AnimatedSprite2D.play("holdquit2") 
 
 func _on_quitter_mouse_exited() -> void:
-	if  $lvl2.visible:
+	if is_animating:  # Bloquer si animation en cours
+		return
+	if $lvl2.visible:
 		$AnimatedSprite2D.play("map") 
-	else :
+	else:
 		$AnimatedSprite2D.play("default") 
 
 func _on_map_pressed() -> void:
@@ -44,12 +47,12 @@ func _on_map_pressed() -> void:
 	$lvl2.visible = true
 
 func _on_map_mouse_entered() -> void:
-	if not $map.visible:
+	if not $map.visible or is_animating:
 		return
 	$AnimatedSprite2D.play("holdadv")
 
 func _on_map_mouse_exited() -> void:
-	if not $map.visible:
+	if not $map.visible or is_animating:
 		return
 	$AnimatedSprite2D.play("default")
 
@@ -76,12 +79,12 @@ func _on_lvl_1_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/lvl1.tscn")
 
 func _on_lvl_1_mouse_entered() -> void:
-	if not $lvl1.visible:
+	if not $lvl1.visible or is_animating:  # Ajouter is_animating
 		return
 	$AnimatedSprite2D.play("lvl1") 
 
 func _on_lvl_1_mouse_exited() -> void:
-	if not $lvl1.visible:
+	if not $lvl1.visible or is_animating:  # Ajouter is_animating
 		return
 	$AnimatedSprite2D.play("map") 
 	
@@ -108,12 +111,12 @@ func _on_lvl_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/lvl2.tscn")
 
 func _on_lvl_2_mouse_entered() -> void:
-	if not $lvl2.visible:
+	if not $lvl2.visible or is_animating:  # Ajouter is_animating
 		return
 	$AnimatedSprite2D.play("lvl2") 
 		
 func _on_lvl_2_mouse_exited() -> void:
-	if not $lvl2.visible:
+	if not $lvl2.visible or is_animating:  # Ajouter is_animating
 		return
 	$AnimatedSprite2D.play("map")
 	
@@ -121,13 +124,11 @@ func _on_arcade_pressed() -> void:
 	pass
 
 func _on_arcade_mouse_entered() -> void:
-	if not $arcade.visible:
+	if not $arcade.visible or is_animating:  # Ajouter is_animating
 		return
 	$AnimatedSprite2D.play("holdarcade")
 
 func _on_arcade_mouse_exited() -> void:
-	if not $arcade.visible:
+	if not $arcade.visible or is_animating:  # Ajouter is_animating
 		return
 	$AnimatedSprite2D.play("default")
-
- 
