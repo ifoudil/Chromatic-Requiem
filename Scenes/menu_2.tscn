@@ -1,9 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://b4vwelxgqjxuj"]
+[gd_scene load_steps=24 format=3 uid="uid://b4vwelxgqjxuj"]
 
 [ext_resource type="Script" uid="uid://d22c4qrkj8mus" path="res://Scripts/menu_2.gd" id="1_tswe5"]
-[ext_resource type="Texture2D" uid="uid://bnj5eul128if0" path="res://Assets/menuu.png" id="2_fowjw"]
+[ext_resource type="Texture2D" uid="uid://bnj5eul128if0" path="res://Assets/menu.png" id="2_fowjw"]
 [ext_resource type="Texture2D" uid="uid://b64ad0wbwm08f" path="res://Assets/lvl1map.png" id="3_ipgxo"]
-[ext_resource type="Texture2D" uid="uid://c3dyrc30c0ihv" path="res://Assets/map2.png" id="3_tmtf3"]
+[ext_resource type="Texture2D" uid="uid://cclv8kp2fat87" path="res://Assets/holdadv.png" id="3_t4ga0"]
+[ext_resource type="Texture2D" uid="uid://c3dyrc30c0ihv" path="res://Assets/map.png" id="3_tmtf3"]
+[ext_resource type="Texture2D" uid="uid://du2a8sng0sdge" path="res://Assets/holdearcade.png" id="4_dymys"]
 [ext_resource type="Texture2D" uid="uid://bugontytkt6rb" path="res://Assets/lvl1map2.png" id="4_i317a"]
 [ext_resource type="Texture2D" uid="uid://du02hc7x0df0h" path="res://Assets/clicklvl1.png" id="5_ituvx"]
 [ext_resource type="Texture2D" uid="uid://ccgpnax6gmu0p" path="res://Assets/clicklvl2.png" id="6_yxofq"]
@@ -29,6 +31,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_t4ga0")
+}],
+"loop": true,
+"name": &"holdadv",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_dymys")
+}],
+"loop": true,
+"name": &"holdarcade",
 "speed": 5.0
 }, {
 "frames": [{
@@ -159,7 +177,7 @@ texture_filter = 1
 position = Vector2(334, 180)
 scale = Vector2(0.997656, 1.00139)
 sprite_frames = SubResource("SpriteFrames_tmtf3")
-animation = &"lvl2up"
+animation = &"holdarcade"
 
 [node name="Quitter" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -209,8 +227,11 @@ offset_right = 241.0
 offset_bottom = 129.0
 
 [connection signal="pressed" from="Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="mouse_entered" from="map" to="." method="_on_map_mouse_entered"]
+[connection signal="mouse_exited" from="map" to="." method="_on_map_mouse_exited"]
 [connection signal="pressed" from="map" to="." method="_on_map_pressed"]
-[connection signal="pressed" from="arcade" to="." method="_on_map_pressed"]
+[connection signal="mouse_entered" from="arcade" to="." method="_on_arcade_mouse_entered"]
+[connection signal="mouse_exited" from="arcade" to="." method="_on_arcade_mouse_exited"]
 [connection signal="pressed" from="arcade" to="." method="_on_arcade_pressed"]
 [connection signal="button_down" from="lvl1" to="." method="_on_lvl_1_button_down"]
 [connection signal="button_up" from="lvl1" to="." method="_on_lvl_1_button_up"]

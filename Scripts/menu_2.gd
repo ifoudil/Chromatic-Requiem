@@ -2,8 +2,10 @@ extends CanvasLayer
 
 
 var is_animating = false
+var no = false
 
 func _ready():
+	no = false
 	$ColorRect.modulate = Color(1, 1, 1, 0.3)
 	$AnimatedSprite2D.play("default") 
 	$map.disabled = false
@@ -17,7 +19,7 @@ func _on_quitter_pressed() -> void:
 	$AnimatedSprite2D.play("default") 
 	$map.disabled = false
 	$Quitter.disabled = false
-	$arcade.disabled = true
+	$arcade.disabled = false
 	self.visible = false
 	get_tree().paused = false
 
@@ -27,6 +29,27 @@ func _on_map_pressed() -> void:
 	$arcade.disabled = true
 	$lvl1.disabled = false
 	$lvl2.disabled = false
+	var no = true
+
+func _on_map_mouse_entered() -> void:
+	if no:
+		
+		return
+		
+	if not no:
+		$AnimatedSprite2D.play("holdadv")
+
+
+func _on_map_mouse_exited() -> void:
+	if no:
+		return
+		
+	await get_tree().create_timer(0.05).timeout
+	if not no:
+		$AnimatedSprite2D.play("default")
+
+
+
 
 func _on_lvl_1_pressed() -> void:
 	is_animating = true
@@ -113,3 +136,13 @@ func _on_lvl_2_mouse_exited() -> void:
 	
 func _on_arcade_pressed() -> void:
 	pass
+
+
+func _on_arcade_mouse_entered() -> void:
+	await get_tree().create_timer(0.05).timeout
+	$AnimatedSprite2D.play("holdarcade")
+
+
+func _on_arcade_mouse_exited() -> void:
+	await get_tree().create_timer(0.05).timeout
+	$AnimatedSprite2D.play("default")
