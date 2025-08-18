@@ -5,6 +5,9 @@ extends Node2D
 
 func _ready():
 	$continuer.visible = false
+	sprite.play("udaptedrip")
+	await get_tree().create_timer(1.2).timeout
+	
 	sprite.play("default")
 	await get_tree().create_timer(1).timeout
 		

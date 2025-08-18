@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://gxmrwxxp2xch"]
+[gd_scene load_steps=14 format=3 uid="uid://gxmrwxxp2xch"]
 
 [ext_resource type="Texture2D" uid="uid://cbe8ipr8co47j" path="res://Assets/lvl1.png" id="1_k1kij"]
 [ext_resource type="PackedScene" uid="uid://dc2uygkwfcu8w" path="res://Scenes/baddieyellow.tscn" id="2_ilbed"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dg8j8ccc3fnnn" path="res://Scenes/trampo.tscn" id="5_gw65t"]
 [ext_resource type="Texture2D" uid="uid://c2s14aa0f4s8k" path="res://Assets/microship1.png" id="6_4bcgh"]
 [ext_resource type="Script" uid="uid://b2ypw3xahafx2" path="res://scripts/area_2d_3.gd" id="7_4bcgh"]
+[ext_resource type="Texture2D" uid="uid://dybv0cq6iu2h7" path="res://Assets/microship2.png" id="7_4g8w4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
 size = Vector2(1533.5, 285)
@@ -24,7 +25,7 @@ animations = [{
 "texture": ExtResource("6_4bcgh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_4bcgh")
+"texture": ExtResource("7_4g8w4")
 }],
 "loop": true,
 "name": &"default",
@@ -102,7 +103,7 @@ texture_filter = 1
 position = Vector2(987.5, 881)
 scale = Vector2(0.828122, 0.75)
 sprite_frames = SubResource("SpriteFrames_4g8w4")
-frame_progress = 0.803988
+frame_progress = 0.654936
 
 [node name="Area2D3" type="Area2D" parent="AnimatedSprite2D"]
 position = Vector2(2.12045, 17.5864)
