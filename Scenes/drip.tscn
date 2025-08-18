@@ -159,7 +159,7 @@ position = Vector2(320, 180)
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_j8oo4")
 animation = &"default2"
-frame_progress = 0.680618
+frame_progress = 0.728133
 
 [node name="continuer" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)

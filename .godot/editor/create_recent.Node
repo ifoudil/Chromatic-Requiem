@@ -1,7 +1,8 @@
+CollisionShape2D
+AnimatedSprite2D
 AnimationPlayer
 Button
 Area2D
-AnimatedSprite2D
 Node2D
 AudioStreamPlayer2D
 Node
@@ -9,6 +10,5 @@ PinJoint2D
 TextureRect
 CanvasLayer
 StaticBody2D
-CollisionShape2D
 AudioStreamPlayer
 Timer
