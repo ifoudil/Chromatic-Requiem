@@ -207,7 +207,7 @@ position = Vector2(320, 180)
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_j8oo4")
 animation = &"udaptedrip"
-frame_progress = 0.630401
+frame_progress = 0.49468
 
 [node name="continuer" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
