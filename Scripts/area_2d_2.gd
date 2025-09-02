@@ -9,8 +9,6 @@ func _ready():
 func _on_body_entered(body):
 	print("Collision with ", body.name)
 	if body.name == "CharacterBody2D":
-		if menu_instance == null:
-			menu_instance = menu_scene.instantiate()
-			get_tree().current_scene.add_child(menu_instance)
-		else:
-			menu_instance.visible = true
+		menu_instance = menu_scene.instantiate()
+		get_tree().current_scene.add_child(menu_instance)
+		get_tree().paused = true
