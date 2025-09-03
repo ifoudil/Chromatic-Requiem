@@ -25,3 +25,5 @@ res://scripts/area_2d_3.gd
 res://Scenes/projectile.tscn
 res://Scripts/projectile.gd
 res://Scripts/area_2d_2.gd
+res://Scenes/arcade.tscn
+res://scripts/arcade.gd
