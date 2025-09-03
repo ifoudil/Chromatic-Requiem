@@ -1,13 +1,13 @@
 [gd_scene load_steps=15 format=3 uid="uid://gxmrwxxp2xch"]
 
-[ext_resource type="Script" uid="uid://lmgy383uht77" path="res://scripts/lvl_1.gd" id="1_4bcgh"]
+[ext_resource type="Script" uid="uid://lmgy383uht77" path="res://Scripts/lvl_1.gd" id="1_4bcgh"]
 [ext_resource type="Texture2D" uid="uid://cbe8ipr8co47j" path="res://Assets/lvl1.png" id="1_k1kij"]
 [ext_resource type="PackedScene" uid="uid://dc2uygkwfcu8w" path="res://Scenes/baddieyellow.tscn" id="2_ilbed"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="3_k1kij"]
 [ext_resource type="PackedScene" uid="uid://b0s70kcvun8us" path="res://Scenes/area_2d.tscn" id="4_oxj74"]
 [ext_resource type="PackedScene" uid="uid://dg8j8ccc3fnnn" path="res://Scenes/trampo.tscn" id="5_gw65t"]
 [ext_resource type="Texture2D" uid="uid://c2s14aa0f4s8k" path="res://Assets/microship1.png" id="6_4bcgh"]
-[ext_resource type="Script" uid="uid://b2ypw3xahafx2" path="res://scripts/area_2d_3.gd" id="7_4bcgh"]
+[ext_resource type="Script" uid="uid://b2ypw3xahafx2" path="res://Scripts/area_2d_3.gd" id="7_4bcgh"]
 [ext_resource type="Texture2D" uid="uid://dybv0cq6iu2h7" path="res://Assets/microship2.png" id="7_4g8w4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
@@ -45,7 +45,7 @@ position = Vector2(319, 281)
 
 [node name="TextureRect" type="TextureRect" parent="Area2D2"]
 offset_left = -322.0
-offset_top = -344.0
+offset_top = -346.0
 offset_right = 1214.0
 offset_bottom = 680.0
 texture = ExtResource("1_k1kij")
