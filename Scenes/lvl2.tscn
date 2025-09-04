@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bycoicfh3g6sp"]
+[gd_scene load_steps=9 format=3 uid="uid://bycoicfh3g6sp"]
 
 [ext_resource type="Texture2D" uid="uid://bg325a1xyfjxm" path="res://Assets/fond_scene1.png" id="1_yo6rb"]
 [ext_resource type="PackedScene" uid="uid://cdyetyvyljpk" path="res://Scenes/baddieViolet.tscn" id="2_yo6rb"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="3_8hx2h"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
-size = Vector2(1629, 285)
+[ext_resource type="Texture2D" uid="uid://s2d35ite8ib" path="res://Assets/traces.png" id="4_yue0m"]
+[ext_resource type="Script" uid="uid://c0flmbuy61pe8" path="res://scripts/traces.gd" id="5_286jt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k1kij"]
 animations = [{
@@ -21,19 +20,22 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxj74"]
 size = Vector2(640, 38)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
+size = Vector2(1629, 176.75)
+
 [node name="lvl2" type="Node2D"]
 position = Vector2(3, 64)
-
-[node name="Area2D2" type="StaticBody2D" parent="."]
-position = Vector2(319, 281)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(497.5, 652.5)
-shape = SubResource("RectangleShape2D_gw65t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(762, 452)
 sprite_frames = SubResource("SpriteFrames_k1kij")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(301, 189)
+scale = Vector2(2.45023, 2.39583)
+texture = ExtResource("4_yue0m")
+script = ExtResource("5_286jt")
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 
@@ -42,10 +44,10 @@ position = Vector2(319, 272)
 shape = SubResource("RectangleShape2D_oxj74")
 
 [node name="characterBody2D" parent="." instance=ExtResource("2_yo6rb")]
-position = Vector2(142, -56)
+position = Vector2(313, 244)
 
 [node name="Camera2D2" type="Camera2D" parent="characterBody2D"]
-position = Vector2(176, 206)
+position = Vector2(5, -127)
 limit_left = 0
 limit_top = 0
 limit_right = 1500
@@ -59,3 +61,10 @@ drag_bottom_margin = 0.3
 editor_draw_drag_margin = true
 
 [node name="pause" parent="." instance=ExtResource("3_8hx2h")]
+
+[node name="Area2D2" type="StaticBody2D" parent="."]
+position = Vector2(312, 244)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(444, 678.375)
+shape = SubResource("RectangleShape2D_gw65t")

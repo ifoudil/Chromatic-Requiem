@@ -1,3 +1,4 @@
+Sprite2D
 Timer
 CollisionShape2D
 CharacterBody2D
@@ -12,4 +13,3 @@ Node
 PinJoint2D
 TextureRect
 CanvasLayer
-AudioStreamPlayer
