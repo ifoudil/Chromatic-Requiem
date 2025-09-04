@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cdyetyvyljpk"]
+[gd_scene load_steps=28 format=3 uid="uid://cdyetyvyljpk"]
 
 [ext_resource type="Script" uid="uid://bgu1siu503xp7" path="res://Scripts/baddie_violet.gd" id="1_tdr17"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_tdr17"]
@@ -25,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://dl8hx0bkigteb" path="res://Assets/jumpviolet3.png" id="17_p5wa5"]
 [ext_resource type="Texture2D" uid="uid://dravck4hld6qy" path="res://Assets/jumpviolet1.png" id="20_srjvs"]
 [ext_resource type="AudioStream" uid="uid://c0xyuikijaq16" path="res://SFX/violet.mp3" id="22_74vap"]
-[ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="25_p5wa5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xh4dr"]
 animations = [{
@@ -198,7 +197,8 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"idle_left"
+animation = &"atk_demode"
+frame_progress = 0.02496
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -219,8 +219,6 @@ one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_74vap")
-
-[node name="pause" parent="." instance=ExtResource("25_p5wa5")]
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="ModeTimer" to="." method="_on_mode_timer_timeout"]
