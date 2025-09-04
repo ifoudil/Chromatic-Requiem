@@ -19,3 +19,4 @@ res://Scenes/arcade.tscn
 res://Scripts/arcadee.gd
 res://Scripts/menu_2.gd
 res://Scripts/lvl_1.gd
+res://scripts/persoarcade.gd
