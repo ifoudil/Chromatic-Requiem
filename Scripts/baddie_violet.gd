@@ -41,6 +41,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("atk") and not is_attacking:
 			is_attacking = true  # Bloquer les nouvelles attaques
 			atk_timer.start()
+			$AudioStreamPlayer.play()
 			if facing_right:
 				sprite.play("atk1_right")
 			else:
