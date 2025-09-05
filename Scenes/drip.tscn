@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://c8nitoc645kcs"]
+[gd_scene load_steps=43 format=3 uid="uid://c8nitoc645kcs"]
 
 [ext_resource type="Script" uid="uid://bo6upbbe1nw1d" path="res://Scripts/drip.gd" id="1_a4haw"]
 [ext_resource type="Texture2D" uid="uid://88hv2htqkxvu" path="res://Assets/drip1.png" id="2_7aswd"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://dnloj0cinmxvs" path="res://Assets/ffoudre5.png" id="26_4l7ke"]
 [ext_resource type="Texture2D" uid="uid://d3yj37cqfrsot" path="res://Assets/ffoudre8.png" id="27_7wg4k"]
 [ext_resource type="Texture2D" uid="uid://cgwr4s07so0va" path="res://Assets/ffoudre9.png" id="28_vgilh"]
+[ext_resource type="Texture2D" uid="uid://dxqnmouhn3xrj" path="res://Assets/ffoudre10.png" id="29_rmca4"]
 [ext_resource type="Texture2D" uid="uid://cn3g6yk0hmjrj" path="res://Assets/udaptedrip.png" id="30_dlhon"]
 [ext_resource type="Texture2D" uid="uid://1cd2675bx8s8" path="res://Assets/udaptedrip2.png" id="31_vsrfl"]
 [ext_resource type="Texture2D" uid="uid://bk81qttc77edt" path="res://Assets/udaptedrip3.png" id="32_rmca4"]
@@ -149,6 +150,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("25_rmca4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4l7ke")
 }],
 "loop": true,
 "name": &"flash",
@@ -156,7 +160,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("26_4l7ke")
+"texture": ExtResource("29_rmca4")
 }, {
 "duration": 1.0,
 "texture": ExtResource("27_7wg4k")
@@ -215,7 +219,8 @@ script = ExtResource("1_a4haw")
 texture_filter = 1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_j8oo4")
-animation = &"default3"
+animation = &"flash2"
+frame_progress = 0.0873737
 
 [node name="continuer" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
