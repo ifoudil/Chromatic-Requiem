@@ -15,7 +15,7 @@ func create_jump_mark():
 	is_mark_active = true
 	
 	# Se positionner à l'endroit du personnage
-	global_position = character.global_position + Vector2(-12,-54)
+	global_position = character.global_position + Vector2(-12,-54 )
 	visible = true
 	modulate = Color(1, 1, 1, 1)  # Opaque
 	

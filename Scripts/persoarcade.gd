@@ -13,6 +13,9 @@ var controls_enabled = true
 var facing_right = true
 var is_attacking = false
 
+func _ready():
+	$AnimatedSprite2D.play("idle_right")
+
 func _physics_process(delta):
 	if !is_on_floor():
 		velocity.y = clamp(velocity.y + gravity * delta, -500, 500)
