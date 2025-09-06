@@ -11,6 +11,7 @@ func _ready():
 	# Niveaux cachés
 	$lvl1.visible = false
 	$lvl2.visible = false
+	$play.visible = false
 	get_tree().paused = true
 
 func _on_quitter_pressed() -> void:
@@ -26,6 +27,8 @@ func _on_quitter_pressed() -> void:
 func _on_quitter_mouse_entered() -> void:
 	if is_animating:  # Bloquer si animation en cours
 		return
+	if $play.visible:
+		$AnimatedSprite2D.play("holdquitt") 
 	if $arcade.visible:
 		$AnimatedSprite2D.play("holdquit") 
 	if $lvl2.visible:
@@ -36,6 +39,8 @@ func _on_quitter_mouse_exited() -> void:
 		return
 	if $lvl2.visible:
 		$AnimatedSprite2D.play("map") 
+	if $play.visible:
+		$AnimatedSprite2D.play("play") 
 	else:
 		$AnimatedSprite2D.play("default") 
 
@@ -121,7 +126,23 @@ func _on_lvl_2_mouse_exited() -> void:
 	$AnimatedSprite2D.play("map")
 	
 func _on_arcade_pressed() -> void:
-	is_animating = true
+	$AnimatedSprite2D.play("play")
+	$play.visible = true
+	$map.visible = false
+	$arcade.visible = false
+
+func _on_arcade_mouse_entered() -> void:
+	if not $arcade.visible or is_animating:  # Ajouter is_animating
+		return
+	$AnimatedSprite2D.play("holdarcade")
+
+func _on_arcade_mouse_exited() -> void:
+	if not $arcade.visible or is_animating:  # Ajouter is_animating
+		return
+	$AnimatedSprite2D.play("default")
+
+
+func _on_play_pressed() -> void:
 	get_tree().paused = false
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 	var next_scene = load("res://Scenes/arcade.tscn")
@@ -136,12 +157,10 @@ func _on_arcade_pressed() -> void:
 	await tween1.finished
 	get_tree().change_scene_to_file("res://Scenes/arcade.tscn")
 
-func _on_arcade_mouse_entered() -> void:
-	if not $arcade.visible or is_animating:  # Ajouter is_animating
-		return
-	$AnimatedSprite2D.play("holdarcade")
 
-func _on_arcade_mouse_exited() -> void:
-	if not $arcade.visible or is_animating:  # Ajouter is_animating
-		return
-	$AnimatedSprite2D.play("default")
+func _on_play_mouse_entered() -> void:
+	$AnimatedSprite2D.play("holdplay") 
+
+
+func _on_play_mouse_exited() -> void:
+	$AnimatedSprite2D.play("play") 

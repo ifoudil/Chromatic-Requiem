@@ -219,8 +219,8 @@ script = ExtResource("1_a4haw")
 texture_filter = 1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_j8oo4")
-animation = &"flash2"
-frame_progress = 0.168041
+animation = &"flash"
+frame_progress = 0.546234
 
 [node name="continuer" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
