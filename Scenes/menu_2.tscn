@@ -93,7 +93,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"holdplay3",
-"speed": 0.2
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -180,10 +180,27 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
 }],
 "loop": true,
 "name": &"lvl1up",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}],
+"loop": true,
+"name": &"lvl1upp",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -285,8 +302,7 @@ texture_filter = 1
 position = Vector2(334, 180)
 scale = Vector2(0.997656, 1.00139)
 sprite_frames = SubResource("SpriteFrames_tmtf3")
-animation = &"holdplay3"
-frame_progress = 0.735755
+animation = &"lvl1up"
 
 [node name="Quitter" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
