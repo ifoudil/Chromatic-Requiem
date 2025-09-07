@@ -159,8 +159,13 @@ func _on_play_pressed() -> void:
 
 
 func _on_play_mouse_entered() -> void:
-	$AnimatedSprite2D.play("holdplay") 
+	$AnimatedSprite2D.play("holdplay2") 
+	await get_tree().create_timer(0.49).timeout
+	$AnimatedSprite2D.play("holdplay3") 
+
 
 
 func _on_play_mouse_exited() -> void:
+	$AnimatedSprite2D.play("holdplay2")
+	await get_tree().create_timer(0.49).timeout
 	$AnimatedSprite2D.play("play") 

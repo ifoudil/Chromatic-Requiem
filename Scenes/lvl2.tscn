@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cdyetyvyljpk" path="res://Scenes/baddieViolet.tscn" id="2_yo6rb"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="3_8hx2h"]
 [ext_resource type="Texture2D" uid="uid://s2d35ite8ib" path="res://Assets/traces.png" id="4_yue0m"]
-[ext_resource type="Script" uid="uid://c0flmbuy61pe8" path="res://scripts/traces.gd" id="5_286jt"]
+[ext_resource type="Script" uid="uid://c0flmbuy61pe8" path="res://Scripts/traces.gd" id="5_286jt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k1kij"]
 animations = [{

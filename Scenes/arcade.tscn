@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://j5t3ul8bkcvi" path="res://Assets/2-removebg-preview.png" id="5_8inwh"]
 [ext_resource type="Texture2D" uid="uid://cejoj6jua5mx7" path="res://Assets/3-removebg-preview.png" id="6_0ov7s"]
 [ext_resource type="Texture2D" uid="uid://d1e52woaormbs" path="res://Assets/nrmlidleleft.png" id="7_4mld8"]
-[ext_resource type="Script" uid="uid://cl8ynu7jj46pk" path="res://scripts/persoarcade.gd" id="7_633ur"]
+[ext_resource type="Script" uid="uid://cl8ynu7jj46pk" path="res://Scripts/persoarcade.gd" id="7_633ur"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="7_domho"]
 [ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="8_633ur"]
 [ext_resource type="Texture2D" uid="uid://dvh20ys4wfmtu" path="res://Assets/nrmlidleright.png" id="8_s0rvt"]

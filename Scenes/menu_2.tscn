@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b4vwelxgqjxuj"]
+[gd_scene load_steps=37 format=3 uid="uid://b4vwelxgqjxuj"]
 
 [ext_resource type="Script" uid="uid://d22c4qrkj8mus" path="res://Scripts/menu_2.gd" id="1_tswe5"]
 [ext_resource type="Texture2D" uid="uid://bnj5eul128if0" path="res://Assets/menu.png" id="2_fowjw"]
@@ -10,13 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://dwnmnbxxy6dqd" path="res://Assets/holdplay.png" id="5_4rk10"]
 [ext_resource type="Texture2D" uid="uid://c4fsk3162mab1" path="res://Assets/holdquit.png" id="5_dv7xs"]
 [ext_resource type="Texture2D" uid="uid://du02hc7x0df0h" path="res://Assets/clicklvl1.png" id="5_ituvx"]
+[ext_resource type="Texture2D" uid="uid://rwgs3kpolu2t" path="res://Assets/holdplay2.png" id="6_0qo56"]
 [ext_resource type="Texture2D" uid="uid://cit1kp5chbibg" path="res://Assets/mapquit.png" id="6_jkb07"]
 [ext_resource type="Texture2D" uid="uid://ccgpnax6gmu0p" path="res://Assets/clicklvl2.png" id="6_yxofq"]
+[ext_resource type="Texture2D" uid="uid://c67n4ka8yl7dj" path="res://Assets/holdplay3.png" id="7_imrui"]
 [ext_resource type="Texture2D" uid="uid://u3q6ftaymqn4" path="res://Assets/clicklvl3.png" id="7_tj5yo"]
 [ext_resource type="Texture2D" uid="uid://d10w2gb2fmsnk" path="res://Assets/clicklvl4.png" id="8_06vqn"]
+[ext_resource type="Texture2D" uid="uid://ck8ki2wwy13hp" path="res://Assets/holdplay4.png" id="8_h01b4"]
 [ext_resource type="Texture2D" uid="uid://u0qt4jb4fbv3" path="res://Assets/holdquit2.png" id="8_jh4p8"]
 [ext_resource type="Texture2D" uid="uid://cwb2gr25tsguo" path="res://Assets/clicklvl5.png" id="9_3l1j6"]
+[ext_resource type="Texture2D" uid="uid://bwh15jtut6nq5" path="res://Assets/holdplay5.png" id="9_x8h31"]
 [ext_resource type="Texture2D" uid="uid://8mj8udcjhdy7" path="res://Assets/clickup1.png" id="10_06vqn"]
+[ext_resource type="Texture2D" uid="uid://b7ntdtk72hwr5" path="res://Assets/holdplay6.png" id="10_do80l"]
 [ext_resource type="Texture2D" uid="uid://bhbgsijinl1p4" path="res://Assets/clickup2.png" id="11_3l1j6"]
 [ext_resource type="Texture2D" uid="uid://b1l6k0p5e0g3j" path="res://Assets/clickup3.png" id="12_6umdb"]
 [ext_resource type="Texture2D" uid="uid://c18br8wugj8sd" path="res://Assets/lvl2map.png" id="13_6umdb"]
@@ -64,6 +69,31 @@ animations = [{
 "loop": true,
 "name": &"holdplay",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0qo56")
+}],
+"loop": true,
+"name": &"holdplay2",
+"speed": 0.3
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_imrui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h01b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x8h31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_do80l")
+}],
+"loop": true,
+"name": &"holdplay3",
+"speed": 0.2
 }, {
 "frames": [{
 "duration": 1.0,
@@ -255,7 +285,8 @@ texture_filter = 1
 position = Vector2(334, 180)
 scale = Vector2(0.997656, 1.00139)
 sprite_frames = SubResource("SpriteFrames_tmtf3")
-animation = &"holdquitt"
+animation = &"holdplay3"
+frame_progress = 0.735755
 
 [node name="Quitter" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)

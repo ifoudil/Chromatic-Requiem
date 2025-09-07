@@ -1,5 +1,4 @@
 res://Scenes/pause.tscn
-res://Scenes/lvl1.tscn
 res://Scenes/baddieyellow.tscn
 res://Scenes/baddieViolet.tscn
 res://Scenes/lvl2.tscn
@@ -11,15 +10,10 @@ res://Scenes/trampo.tscn
 res://Scenes/intro.tscn
 res://Scenes/drip.tscn
 res://Scenes/menu_2.tscn
+res://Scenes/lvl1.tscn
 res://Scenes/rock.tscn
 res://Scenes/fleche.tscn
 res://Scenes/Baddie.tscn
 res://Scenes/projectile.tscn
 res://Scenes/arcade.tscn
-res://Scripts/arcadee.gd
 res://Scripts/menu_2.gd
-res://Scripts/lvl_1.gd
-res://scripts/persoarcade.gd
-res://Scripts/baddie_violet.gd
-res://scripts/traces.gd
-res://Scripts/drip.gd
