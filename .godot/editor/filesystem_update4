@@ -17,3 +17,6 @@ res://Scenes/Baddie.tscn
 res://Scenes/projectile.tscn
 res://Scenes/arcade.tscn
 res://Scripts/menu_2.gd
+res://Scenes/pink.tscn
+res://Scenes/lvl_3.tscn
+res://Scripts/player.gd

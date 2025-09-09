@@ -35,13 +35,13 @@ func _on_quitter_mouse_entered() -> void:
 		$AnimatedSprite2D.play("holdquit2") 
 
 func _on_quitter_mouse_exited() -> void:
-	if is_animating:  # Bloquer si animation en cours
+	if is_animating: 
 		return
 	if $lvl2.visible:
 		$AnimatedSprite2D.play("map") 
 	if $play.visible:
 		$AnimatedSprite2D.play("play") 
-	else:
+	if $arcade.visible:
 		$AnimatedSprite2D.play("default") 
 
 func _on_map_pressed() -> void:

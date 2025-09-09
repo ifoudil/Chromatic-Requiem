@@ -44,7 +44,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -98,7 +98,7 @@ texture_filter = 1
 position = Vector2(1109, -215.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"jump_right"
+animation = &"idle_right"
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 
