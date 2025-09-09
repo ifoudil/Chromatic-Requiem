@@ -24,4 +24,8 @@ shape = SubResource("RectangleShape2D_epe4w")
 position = Vector2(323, 373)
 shape = SubResource("RectangleShape2D_5pmam")
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(690, 297)
+shape = SubResource("RectangleShape2D_5pmam")
+
 [node name="pink" parent="." instance=ExtResource("1_5pmam")]
