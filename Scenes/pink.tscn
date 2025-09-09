@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="3_sxahx"]
 [ext_resource type="Texture2D" uid="uid://dm1rl8f63d5ux" path="res://Assets/pinkidlel2.png" id="4_bowul"]
 [ext_resource type="Texture2D" uid="uid://bhrl4lm50fclq" path="res://Assets/pinkidlel.png" id="5_sxahx"]
-[ext_resource type="Texture2D" uid="uid://dxgh42bw8n2bg" path="res://Assets/idlepinkr.png" id="6_sagmg"]
-[ext_resource type="Texture2D" uid="uid://b6ulq26u5jiqu" path="res://Assets/idlepinkr2.png" id="7_7dha7"]
+[ext_resource type="Texture2D" uid="uid://dxgh42bw8n2bg" path="res://Assets/pinkir.png" id="6_sagmg"]
+[ext_resource type="Texture2D" uid="uid://b6ulq26u5jiqu" path="res://Assets/pinkir2.png" id="7_7dha7"]
 [ext_resource type="Texture2D" uid="uid://sxcufh02xf62" path="res://Assets/pinkjl.png" id="8_sagmg"]
 [ext_resource type="Texture2D" uid="uid://du738jbe7ycx1" path="res://Assets/pinkjl2.png" id="9_7dha7"]
 [ext_resource type="Texture2D" uid="uid://wr088fr3h8fw" path="res://Assets/pinkjr.png" id="9_pm8t0"]
@@ -121,7 +121,6 @@ position = Vector2(1109, -217.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_lsyeo")
 animation = &"jump_left"
-frame_progress = 0.0845756
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 

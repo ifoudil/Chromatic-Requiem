@@ -1,14 +1,18 @@
-[gd_scene load_steps=29 format=3 uid="uid://b03s6rgm5pwnq"]
+[gd_scene load_steps=33 format=3 uid="uid://b03s6rgm5pwnq"]
 
 [ext_resource type="Texture2D" uid="uid://o6sas14d5ck0" path="res://Assets/arcade.png" id="1_3ufcg"]
 [ext_resource type="Script" uid="uid://cado3t4xdwmag" path="res://Scripts/arcadee.gd" id="1_i82s6"]
 [ext_resource type="Texture2D" uid="uid://dmf0txtwivitr" path="res://Assets/arcade2.png" id="3_i82s6"]
+[ext_resource type="Texture2D" uid="uid://dh1rgkq12xm8c" path="res://Assets/arcadepink.png" id="4_635gl"]
 [ext_resource type="Texture2D" uid="uid://ccd4jijvwdu8k" path="res://Assets/1-removebg-preview.png" id="4_nw1ri"]
 [ext_resource type="Texture2D" uid="uid://j5t3ul8bkcvi" path="res://Assets/2-removebg-preview.png" id="5_8inwh"]
+[ext_resource type="Texture2D" uid="uid://bbu1orrypou7f" path="res://Assets/arcadepink2.png" id="5_pd57b"]
 [ext_resource type="Texture2D" uid="uid://cejoj6jua5mx7" path="res://Assets/3-removebg-preview.png" id="6_0ov7s"]
+[ext_resource type="Texture2D" uid="uid://dfq4n13ml6omw" path="res://Assets/arcadeyellow.png" id="6_ytqvr"]
 [ext_resource type="Texture2D" uid="uid://d1e52woaormbs" path="res://Assets/nrmlidleleft.png" id="7_4mld8"]
 [ext_resource type="Script" uid="uid://cl8ynu7jj46pk" path="res://Scripts/persoarcade.gd" id="7_633ur"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="7_domho"]
+[ext_resource type="Texture2D" uid="uid://dacgvgtrctb23" path="res://Assets/arcadeyellow2.png" id="7_u6xae"]
 [ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="8_633ur"]
 [ext_resource type="Texture2D" uid="uid://dvh20ys4wfmtu" path="res://Assets/nrmlidleright.png" id="8_s0rvt"]
 [ext_resource type="Texture2D" uid="uid://obmv61adm7fc" path="res://Assets/nrmljumpleft.png" id="9_4mld8"]
@@ -31,6 +35,28 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_635gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pd57b")
+}],
+"loop": true,
+"name": &"pink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ytqvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_u6xae")
+}],
+"loop": true,
+"name": &"yellow",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nw1ri"]
@@ -152,6 +178,7 @@ process_mode = 3
 texture_filter = 1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_3h0sf")
+animation = &"yellow"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
