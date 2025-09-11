@@ -2,7 +2,7 @@ extends CanvasLayer
 
 func _ready():
 	$AnimatedSprite2D.play("default") 
-	$VBoxContainer/map.disabled = false
+	$VBoxContnnnainer/map.disabled = false
 	$VBoxContainer/Quitter.disabled = false
 	$lvl1.disabled = true
 	$lvl2.disabled = true

@@ -1,8 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4vwelxgqjxuj"]
+[gd_scene load_steps=29 format=3 uid="uid://b4vwelxgqjxuj"]
 
 [ext_resource type="Script" path="res://Scripts/menu_2.gd" id="1_tswe5"]
-[ext_resource type="Texture2D" uid="uid://x6ok1vcy86cs" path="res://Assets/map.png" id="2_fowjw"]
-[ext_resource type="Texture2D" uid="uid://gg6q0mustuj5" path="res://Assets/carte.png" id="3_tmtf3"]
+[ext_resource type="Texture2D" uid="uid://mcrkglt771wf" path="res://Assets/menu.png" id="2_fowjw"]
+[ext_resource type="Texture2D" uid="uid://d1gtgulog0dta" path="res://Assets/lvl1map.png" id="3_ipgxo"]
+[ext_resource type="Texture2D" uid="uid://cvofsly0udw8" path="res://Assets/holdadv.png" id="3_t4ga0"]
+[ext_resource type="Texture2D" uid="uid://blxg4quipns1a" path="res://Assets/map.png" id="3_tmtf3"]
+[ext_resource type="Texture2D" uid="uid://x44aayegpp5m" path="res://Assets/holdearcade.png" id="4_dymys"]
+[ext_resource type="Texture2D" uid="uid://ctn482elf3tq0" path="res://Assets/lvl1map2.png" id="4_i317a"]
+[ext_resource type="Texture2D" uid="uid://x87ndxxrj4xr" path="res://Assets/holdquit.png" id="5_dv7xs"]
+[ext_resource type="Texture2D" uid="uid://di3sghyvimx4c" path="res://Assets/clicklvl1.png" id="5_ituvx"]
+[ext_resource type="Texture2D" uid="uid://bba3nmc467jei" path="res://Assets/mapquit.png" id="6_jkb07"]
+[ext_resource type="Texture2D" uid="uid://d1swurloa5dp7" path="res://Assets/clicklvl2.png" id="6_yxofq"]
+[ext_resource type="Texture2D" uid="uid://cdbpueoa6ylnl" path="res://Assets/clicklvl3.png" id="7_tj5yo"]
+[ext_resource type="Texture2D" uid="uid://pahb3x66gtoi" path="res://Assets/clicklvl4.png" id="8_06vqn"]
+[ext_resource type="Texture2D" uid="uid://cil0kh1d2hm6t" path="res://Assets/clicklvl5.png" id="9_3l1j6"]
+[ext_resource type="Texture2D" uid="uid://drttsiypoj5jg" path="res://Assets/clickup1.png" id="10_06vqn"]
+[ext_resource type="Texture2D" uid="uid://c3l8fki1v27fw" path="res://Assets/clickup2.png" id="11_3l1j6"]
+[ext_resource type="Texture2D" uid="uid://cw6r3c1otiaww" path="res://Assets/clickup3.png" id="12_6umdb"]
+[ext_resource type="Texture2D" uid="uid://dopgqn6ksqesq" path="res://Assets/lvl2map.png" id="13_6umdb"]
+[ext_resource type="Texture2D" uid="uid://tprl4nosk3hu" path="res://Assets/lvl2map2.png" id="14_shx1t"]
+[ext_resource type="Texture2D" uid="uid://1dnvytxa80yn" path="res://Assets/clicklvl12.png" id="15_noesh"]
+[ext_resource type="Texture2D" uid="uid://d4mb70jkrwnhc" path="res://Assets/clicklvl22.png" id="16_f45g1"]
+[ext_resource type="Texture2D" uid="uid://djkm4lneejyb5" path="res://Assets/clicklvl23.png" id="17_t4ga0"]
+[ext_resource type="Texture2D" uid="uid://ckft6x40rdkw5" path="res://Assets/clicklvl42.png" id="18_dymys"]
+[ext_resource type="Texture2D" uid="uid://dk8513r168yx" path="res://Assets/clicklvl52.png" id="19_ijbv1"]
+[ext_resource type="Texture2D" uid="uid://3yxhcys3kejn" path="res://Assets/clickup32.png" id="22_625h5"]
+[ext_resource type="Texture2D" uid="uid://qfhqpeltjjfa" path="res://Assets/clickup12.png" id="23_dv7xs"]
+[ext_resource type="Texture2D" uid="uid://b3fib05wjry0f" path="res://Assets/clickup22.png" id="24_jkb07"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tmtf3"]
 animations = [{
@@ -16,6 +40,170 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_t4ga0")
+}],
+"loop": true,
+"name": &"holdadv",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_dymys")
+}],
+"loop": true,
+"name": &"holdarcade",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dv7xs")
+}],
+"loop": true,
+"name": &"holdquit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jkb07")
+}],
+"loop": true,
+"name": &"holdquit2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ipgxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i317a")
+}],
+"loop": true,
+"name": &"lvl1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ituvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yxofq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tj5yo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_06vqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3l1j6")
+}],
+"loop": true,
+"name": &"lvl1down",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_06vqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_06vqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3l1j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6umdb")
+}],
+"loop": true,
+"name": &"lvl1up",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_6umdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_shx1t")
+}],
+"loop": true,
+"name": &"lvl2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_noesh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_f45g1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_t4ga0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dymys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ijbv1")
+}],
+"loop": true,
+"name": &"lvl2down",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_dv7xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dv7xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jkb07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_625h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_625h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_625h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_625h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_625h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_625h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_625h5")
+}],
+"loop": true,
+"name": &"lvl2up",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("3_tmtf3")
 }],
 "loop": true,
@@ -24,66 +212,85 @@ animations = [{
 }]
 
 [node name="Menu2" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_tswe5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = -1
 anchor_right = 0.997
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -2.0
-offset_right = -0.0800171
-offset_bottom = 4.0
-color = Color(1, 1, 1, 0.505882)
+offset_right = 1.92004
+color = Color(0.181798, 0.181798, 0.181798, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 105.0
-offset_top = 86.0
-offset_right = 507.0
-offset_bottom = 270.0
-theme_override_constants/separation = 30
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+texture_filter = 1
+position = Vector2(334, 180)
+scale = Vector2(0.997656, 1.00139)
+sprite_frames = SubResource("SpriteFrames_tmtf3")
+animation = &"holdquit2"
 
-[node name="map" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Compétences
-
-
-"
-
-[node name="Quitter" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Quitter" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 258.0
+offset_top = 275.0
+offset_right = 355.0
+offset_bottom = 307.0
 text = "Quitter
-
-
 "
 
-[node name="lvl2" type="Button" parent="."]
+[node name="map" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 172.0
+offset_top = 101.0
+offset_right = 440.0
+offset_bottom = 162.0
+text = "map
+"
+flat = true
+
+[node name="arcade" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 200.0
+offset_top = 177.0
+offset_right = 413.0
+offset_bottom = 208.0
+text = "arcade"
+flat = true
+
+[node name="lvl1" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 259.0
-offset_top = 102.0
-offset_right = -362.0
-offset_bottom = -249.0
+offset_left = 282.0
+offset_top = 61.0
+offset_right = -333.0
+offset_bottom = -274.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="lvl1" type="Button" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 111.0
-offset_top = 98.0
-offset_right = -515.0
-offset_bottom = -251.0
+[node name="lvl2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 216.0
+offset_top = 104.0
+offset_right = 241.0
+offset_bottom = 129.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(321, 178)
-scale = Vector2(8.59375, 5.07812)
-sprite_frames = SubResource("SpriteFrames_tmtf3")
-
-[connection signal="pressed" from="VBoxContainer/map" to="." method="_on_map_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
-[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="mouse_entered" from="Quitter" to="." method="_on_quitter_mouse_entered"]
+[connection signal="mouse_exited" from="Quitter" to="." method="_on_quitter_mouse_exited"]
+[connection signal="pressed" from="Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="mouse_entered" from="map" to="." method="_on_map_mouse_entered"]
+[connection signal="mouse_exited" from="map" to="." method="_on_map_mouse_exited"]
+[connection signal="pressed" from="map" to="." method="_on_map_pressed"]
+[connection signal="mouse_entered" from="arcade" to="." method="_on_arcade_mouse_entered"]
+[connection signal="mouse_exited" from="arcade" to="." method="_on_arcade_mouse_exited"]
+[connection signal="pressed" from="arcade" to="." method="_on_arcade_pressed"]
+[connection signal="button_down" from="lvl1" to="." method="_on_lvl_1_button_down"]
+[connection signal="button_up" from="lvl1" to="." method="_on_lvl_1_button_up"]
+[connection signal="mouse_entered" from="lvl1" to="." method="_on_lvl_1_mouse_entered"]
+[connection signal="mouse_exited" from="lvl1" to="." method="_on_lvl_1_mouse_exited"]
 [connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="mouse_entered" from="lvl2" to="." method="_on_lvl_2_mouse_entered"]
+[connection signal="mouse_exited" from="lvl2" to="." method="_on_lvl_2_mouse_exited"]
+[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]

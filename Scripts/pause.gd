@@ -17,7 +17,7 @@ func _on_pause_pressed() -> void:
 		
 	else:
 		# Fermer le menu pause
-		remove_child(menu)  # On enlève le menu → il disparaît + plus d'interaction
+		remove_child(menu)  
 		
 		# REPRENDRE LE JEU
 		get_tree().paused = false

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dg8j8ccc3fnnn"]
 
 [ext_resource type="Script" path="res://Scripts/trampo.gd" id="1_88607"]
-[ext_resource type="Texture2D" uid="uid://cwou8dmiuuc8c" path="res://Assets/pad2.png" id="1_nhpw5"]
-[ext_resource type="Texture2D" uid="uid://q5yu0f3fjbh8" path="res://Assets/pad.png" id="2_88607"]
+[ext_resource type="Texture2D" uid="uid://cjfrcfg7xxtn8" path="res://Assets/pad2.png" id="1_nhpw5"]
+[ext_resource type="Texture2D" uid="uid://d8f3esjml6sf" path="res://Assets/pad.png" id="2_88607"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p7qxl"]
 animations = [{
