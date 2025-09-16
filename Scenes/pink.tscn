@@ -1,32 +1,45 @@
-[gd_scene load_steps=33 format=3 uid="uid://d0ec5xbfdvyxq"]
+[gd_scene load_steps=46 format=3 uid="uid://d0ec5xbfdvyxq"]
 
 [ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_2qqdy"]
-[ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_bowul"]
+[ext_resource type="Texture2D" uid="uid://dg68gf6tb76ae" path="res://Assets/atkpink1l.png" id="2_241kv"]
+[ext_resource type="Texture2D" uid="uid://7qv05djm2xk7" path="res://Assets/atkpink2l.png" id="3_alamy"]
 [ext_resource type="Texture2D" uid="uid://bvycfddfhkcyr" path="res://Assets/atkpink1.png" id="3_teeo0"]
 [ext_resource type="Texture2D" uid="uid://beh2y8y7q38n4" path="res://Assets/atkpink2.png" id="4_12plo"]
 [ext_resource type="Texture2D" uid="uid://dm1rl8f63d5ux" path="res://Assets/pinkidlel2.png" id="4_bowul"]
+[ext_resource type="Texture2D" uid="uid://c3qlhixl8lqgy" path="res://Assets/atkpink3l.png" id="4_f4pt8"]
+[ext_resource type="Texture2D" uid="uid://bq4wjdgd0kjas" path="res://Assets/atkpink4l.png" id="5_pxhob"]
 [ext_resource type="Texture2D" uid="uid://bhrl4lm50fclq" path="res://Assets/pinkidlel.png" id="5_sxahx"]
 [ext_resource type="Texture2D" uid="uid://kaf43yv1kvip" path="res://Assets/atkpink3.png" id="5_xvw0g"]
 [ext_resource type="Texture2D" uid="uid://dxgh42bw8n2bg" path="res://Assets/pinkir.png" id="6_sagmg"]
 [ext_resource type="Texture2D" uid="uid://bhjsk3m56naq8" path="res://Assets/atkpink4.png" id="6_so34w"]
+[ext_resource type="Texture2D" uid="uid://bot4n74du7dyj" path="res://Assets/atkpink5l.png" id="6_uyfc6"]
 [ext_resource type="Texture2D" uid="uid://b6ulq26u5jiqu" path="res://Assets/pinkir2.png" id="7_7dha7"]
+[ext_resource type="Texture2D" uid="uid://c1f4vl3hgytxn" path="res://Assets/atkpink6l.png" id="7_jccjs"]
 [ext_resource type="Texture2D" uid="uid://dwa23i4kvlwwy" path="res://Assets/atkpink5.png" id="7_ujhog"]
 [ext_resource type="Texture2D" uid="uid://bqt64t4vlftjx" path="res://Assets/atkpink6.png" id="8_eua11"]
+[ext_resource type="Texture2D" uid="uid://dvnwwwhgj7mgm" path="res://Assets/atkpink7l.png" id="8_n5oiv"]
 [ext_resource type="Texture2D" uid="uid://sxcufh02xf62" path="res://Assets/pinkjl.png" id="8_sagmg"]
 [ext_resource type="Texture2D" uid="uid://du738jbe7ycx1" path="res://Assets/pinkjl2.png" id="9_7dha7"]
+[ext_resource type="Texture2D" uid="uid://bg0urpm31cp2b" path="res://Assets/atkpink8l.png" id="9_aq6u8"]
 [ext_resource type="Texture2D" uid="uid://dhokj2c371rq0" path="res://Assets/atkpink7.png" id="9_hkaco"]
 [ext_resource type="Texture2D" uid="uid://wr088fr3h8fw" path="res://Assets/pinkjr.png" id="9_pm8t0"]
 [ext_resource type="Texture2D" uid="uid://ctis0ejriletc" path="res://Assets/pinkrl.png" id="9_rxlyh"]
 [ext_resource type="Texture2D" uid="uid://2j70gs81ic7p" path="res://Assets/atkpink8.png" id="10_6m4hh"]
+[ext_resource type="Texture2D" uid="uid://f5q4iluxv37d" path="res://Assets/atkpink9l.png" id="10_663tu"]
 [ext_resource type="Texture2D" uid="uid://ceo36h1h8og8n" path="res://Assets/pinkjl3.png" id="10_ivthd"]
 [ext_resource type="Texture2D" uid="uid://21k0rl8edn50" path="res://Assets/pinkjr2.png" id="10_rxlyh"]
+[ext_resource type="Texture2D" uid="uid://cu0o02ajvirgn" path="res://Assets/atkpink10l.png" id="11_1ehmk"]
 [ext_resource type="Texture2D" uid="uid://ck8nwgpdr0m7x" path="res://Assets/atkpink9.png" id="11_i1eau"]
 [ext_resource type="Texture2D" uid="uid://brbli6qo7ef28" path="res://Assets/pinkjr3.png" id="11_sagmg"]
+[ext_resource type="Texture2D" uid="uid://b23i5jl1fs7c0" path="res://Assets/atkpink11l.png" id="12_a0ya6"]
 [ext_resource type="Texture2D" uid="uid://blbpjafwbjagx" path="res://Assets/atkpink10.png" id="12_b5any"]
 [ext_resource type="Texture2D" uid="uid://cgbq5xunq8ig5" path="res://Assets/pinkrl4.png" id="12_ivthd"]
 [ext_resource type="Texture2D" uid="uid://c6l8a3l5m8fdq" path="res://Assets/atkpink11.png" id="13_17v5e"]
+[ext_resource type="Texture2D" uid="uid://bnbt7yd2rjqvf" path="res://Assets/atkpink12l.png" id="13_y05m0"]
 [ext_resource type="Texture2D" uid="uid://dvfeqku50bk1r" path="res://Assets/pinkrr.png" id="13_ys17d"]
+[ext_resource type="Texture2D" uid="uid://b2dadpfquy38k" path="res://Assets/atkpink13l.png" id="14_2du8w"]
 [ext_resource type="Texture2D" uid="uid://ciu24d1clmrra" path="res://Assets/atkpink12.png" id="14_okc8x"]
+[ext_resource type="Texture2D" uid="uid://pnmpa670fcy8" path="res://Assets/atkpink14l.png" id="15_gktrr"]
 [ext_resource type="Texture2D" uid="uid://bvhx2c71jbbf6" path="res://Assets/atkpink13.png" id="15_xquc0"]
 [ext_resource type="Texture2D" uid="uid://cm76oedpma1kl" path="res://Assets/atkpink14.png" id="16_12plo"]
 [ext_resource type="Texture2D" uid="uid://cox2nf5yw1ouq" path="res://Assets/pinkrr4.png" id="16_dj2ge"]
@@ -35,11 +48,55 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_bowul")
+"texture": ExtResource("2_241kv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_alamy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f4pt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pxhob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uyfc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jccjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n5oiv")
 }],
 "loop": true,
 "name": &"atk1_left",
-"speed": 5.0
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_aq6u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_663tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1ehmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a0ya6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y05m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2du8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gktrr")
+}],
+"loop": true,
+"name": &"atk1_left2",
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -177,8 +234,8 @@ texture_filter = 1
 position = Vector2(1109, -217.813)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_lsyeo")
-animation = &"atk1_right2"
-frame_progress = 0.649289
+animation = &"atk1_left2"
+frame_progress = 0.599065
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 
